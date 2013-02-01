@@ -35,7 +35,9 @@ header {
       display: inline;
       padding-left: 1em;
     }
-    // FIXME: hover should look like something.
+    li:hover {
+      opacity: 0.5;
+    }
   }
 }
 
