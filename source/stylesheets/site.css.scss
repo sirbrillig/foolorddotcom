@@ -1,0 +1,52 @@
+/**
+
+//HTML5 Boilerplate + Normalize
+*= require "_vendor/normalize.css"
+*= require "_vendor/html5bp.css"
+
+//Grid
+*= require "_layout/grid"
+
+*/
+
+header {
+  text-align: right;
+  background-image: image-url('dark_wall.png');
+  padding-right: 5em;
+  padding-bottom: 5em;
+
+  h1 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 5em;
+    color: #dcdcdc;
+    margin: 0px;
+  }
+
+  nav {
+    ul {
+      margin: 0px;
+      padding: 0px;
+    }
+    li {
+      display: inline;
+      padding-left: 1em;
+    }
+    // FIXME: hover should look like something.
+  }
+}
+
+blockquote {
+  text-align: center;
+  font-family: 'Arial Black', sans-serif;
+  font-size: 2em;
+
+  footer {
+    font-size: .6em;
+    text-align: right;
+  }
+}
+
+.main {
+  // FIXME: adding this breaks all other styles -- what??
+  //background-image: image-url('45degree_fabric.png'); 
+}
