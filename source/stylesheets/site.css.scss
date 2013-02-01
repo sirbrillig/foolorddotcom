@@ -9,6 +9,10 @@
 
 */
 
+body {
+  background-image: image-url('45degreee_fabric.png'); 
+}
+
 header {
   text-align: right;
   background-image: image-url('dark_wall.png');
@@ -44,9 +48,4 @@ blockquote {
     font-size: .6em;
     text-align: right;
   }
-}
-
-.main {
-  // FIXME: adding this breaks all other styles -- what??
-  //background-image: image-url('45degree_fabric.png'); 
 }
