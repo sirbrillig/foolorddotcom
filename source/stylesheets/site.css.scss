@@ -31,6 +31,8 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     padding-bottom: 140px;
+    margin-left: auto;
+    width: 300px;
 
     ul {
       margin: 0px;
@@ -38,7 +40,7 @@ header {
     }
     li {
       display: inline;
-      padding-left: 1em;
+      padding-left: .2em;
     }
     li:hover {
       opacity: 0.5;
