@@ -15,6 +15,10 @@ $break          : 30em 14;
   header {
     @include pad(0);
   }
+
+  blockquote {
+    @include squish(0, 0);
+  }
 }
 
 @include at-breakpoint($break) {
@@ -29,6 +33,10 @@ $break          : 30em 14;
       li {
         margin-left: .5em;
       }
+    }
+
+    blockquote {
+      @include squish(2, 2);
     }
   }
 }
