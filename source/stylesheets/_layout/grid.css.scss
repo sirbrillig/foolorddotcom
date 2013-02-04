@@ -1,28 +1,44 @@
 @import "susy";
 
-$total-columns  : 5;
+$total-columns  : 3;
 $column-width   : 4em;
 $gutter-width   : 1em;
 $grid-padding   : .1em;
 
-$break          : 30em 14;
-
-
 .page {
-  @include container($total-columns, $break);
+  @include container();
 //  @include susy-grid-background;
 
   header {
     @include pad(0);
+    font-size: 0.7em;
+  }
+
+  nav {
+    background-image: none;
+    width: auto;
   }
 
   blockquote {
     @include squish(0, 0);
   }
-}
 
-@include at-breakpoint($break) {
-  .page {
+  @include at-breakpoint(290px 5) {
+    @include container();
+//    @include susy-grid-background;
+
+    nav {
+      background-image: image-url('teapot_black.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      padding-bottom: 140px;
+      margin-left: auto;
+      width: 300px;
+    }
+  }
+
+  @include at-breakpoint(30em 14) {
+    @include container();
 //    @include susy-grid-background;
 
     header {
