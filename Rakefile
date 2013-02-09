@@ -24,7 +24,6 @@ end
 desc "deploy build directory to github pages (does not build)"
 task :deploy do
   puts "## Deploying branch to Github Pages"
-  cp_r ".nojekyll", "build/"
   cd "build" do
     system "git add ."
     system "git add -u"
