@@ -3,14 +3,15 @@
 $total-columns  : 3;
 $column-width   : 4em;
 $gutter-width   : 1em;
-$grid-padding   : .1em;
+$grid-padding   : 1em;
 
 .page {
   @include container();
 //  @include susy-grid-background;
 
   header {
-    @include pad(0);
+    @include bleed(2em);
+//    @include pad(0);
     font-size: 0.7em;
   }
 
@@ -37,12 +38,12 @@ $grid-padding   : .1em;
     }
   }
 
-  @include at-breakpoint(30em 14) {
+  @include at-breakpoint(30em 18) {
     @include container();
 //    @include susy-grid-background;
 
     header {
-      @include pad(1);
+//      @include pad(1);
     }
 
     nav {
