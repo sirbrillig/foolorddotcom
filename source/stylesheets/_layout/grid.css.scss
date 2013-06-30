@@ -15,6 +15,14 @@ $grid-padding   : 1em;
     font-size: 0.7em;
   }
 
+  .content {
+    padding: 3rem;
+    @include bleed(2em); /* FIXME: this breaks the mobile width */
+    text-align: center;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 1.5rem;
+  }
+
   nav {
     background-image: none;
     width: auto;

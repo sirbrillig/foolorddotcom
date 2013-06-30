@@ -9,8 +9,39 @@
 
 */
 
+a {
+  text-decoration: none;
+  color: #aaa;
+}
+
+a:visited {
+  color: #aaa;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 body {
   background-image: image-url('45degreee_fabric.png'); 
+}
+
+.blogs {
+  ul {
+    list-style: none;
+
+    li {
+      list-style: none;
+      padding-top: 1em;
+
+      span {
+        display: block;
+      }
+    }
+  }
+}
+.about {
+  background-image: image-url('grey_wash_wall.png'); 
 }
 
 header {
@@ -20,13 +51,12 @@ header {
 
   h1 {
     font-family: 'Arial Black', sans-serif;
-    font-size: 5em;
+    font-size: 5rem;
     color: #dcdcdc;
     margin: 0px;
   }
 
   nav {
-
     ul {
       margin: 0px;
       padding: 0px;
@@ -44,10 +74,16 @@ header {
 blockquote {
   text-align: center;
   font-family: 'Arial Black', sans-serif;
-  font-size: 2em;
+  font-size: 1.2rem;
 
   footer {
     font-size: .6em;
     text-align: right;
+  }
+}
+
+@media (min-width: 321px) {
+  blockquote {
+    font-size: 2rem;
   }
 }
