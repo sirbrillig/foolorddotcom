@@ -4,10 +4,54 @@
 *= require "_vendor/normalize.css"
 *= require "_vendor/html5bp.css"
 
-//Grid
-*= require "_layout/grid"
-
 */
+
+.page {
+  header {
+    font-size: 0.7em;
+  }
+
+  .content {
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 1.5rem;
+  }
+
+  nav {
+    background-image: none;
+    width: auto;
+  }
+
+  @media (min-width: 290px) {
+    nav {
+      background-image: image-url('teapot_black_small.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      padding-bottom: 140px;
+      margin-left: auto;
+      width: 300px;
+    }
+  }
+
+  @media (min-width: 30em) {
+    nav {
+      li {
+        margin-left: .5em;
+      }
+    }
+  }
+
+  @media (min-width: 321px) {
+    blockquote {
+      font-size: 2rem;
+    }
+
+    nav {
+      background-image: image-url('teapot_black.png');
+    }
+  }
+}
 
 a {
   text-decoration: none;
@@ -29,10 +73,10 @@ body {
 .blogs {
   ul {
     list-style: none;
+    padding: 0px;
 
     li {
       list-style: none;
-      padding-top: 1em;
 
       span {
         display: block;
@@ -40,8 +84,9 @@ body {
     }
   }
 }
-.about {
+.page .content.about {
   background-image: image-url('grey_wash_wall.png'); 
+  padding: 3rem;
 }
 
 header {
@@ -79,11 +124,5 @@ blockquote {
   footer {
     font-size: .6em;
     text-align: right;
-  }
-}
-
-@media (min-width: 321px) {
-  blockquote {
-    font-size: 2rem;
   }
 }
