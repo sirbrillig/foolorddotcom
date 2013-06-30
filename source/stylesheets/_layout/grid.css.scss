@@ -10,14 +10,11 @@ $grid-padding   : 1em;
 //  @include susy-grid-background;
 
   header {
-    @include bleed(2em);
-//    @include pad(0);
     font-size: 0.7em;
   }
 
   .content {
     padding: 3rem;
-    @include bleed(2em); /* FIXME: this breaks the mobile width */
     text-align: center;
     font-family: 'Arial Black', sans-serif;
     font-size: 1.5rem;
@@ -37,7 +34,7 @@ $grid-padding   : 1em;
 //    @include susy-grid-background;
 
     nav {
-      background-image: image-url('teapot_black.png');
+      background-image: image-url('teapot_black_small.png');
       background-repeat: no-repeat;
       background-position: center;
       padding-bottom: 140px;
@@ -46,13 +43,15 @@ $grid-padding   : 1em;
     }
   }
 
+  @include at-breakpoint(321px 5) {
+    nav {
+      background-image: image-url('teapot_black.png');
+    }
+  }
+
   @include at-breakpoint(30em 18) {
     @include container();
 //    @include susy-grid-background;
-
-    header {
-//      @include pad(1);
-    }
 
     nav {
       li {
