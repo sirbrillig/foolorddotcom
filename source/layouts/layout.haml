@@ -23,12 +23,5 @@
   %body
     /[if lt IE 7] <p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
     .page
-      %header{role: 'banner'}
-        %h1 Payton Swick
-        %nav#primary-nav
-          %ul
-            %li= link_to(image_tag('twitter.png', alt: 'Twitter'), 'https://twitter.com/sirbrillig', title: '@sirbrillig on Twitter')
-            %li= link_to(image_tag('github.png', alt: 'Github'), 'https://github.com/sirbrillig', title: 'sirbrillig on GitHub')
-            %li= link_to(image_tag('linkedin.png', alt: 'LinkedIn'), 'https://www.linkedin.com/in/paytonswick', title: 'Payton on LinkedIn')
       %div{:role => "main", :class => "main"}= yield
       %footer

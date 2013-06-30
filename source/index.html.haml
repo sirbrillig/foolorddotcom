@@ -1,14 +1,21 @@
+.inside{itemscope: true, itemtype: "http://schema.org/Person"}
+  %header{role: 'banner'}
+    %h1 
+      %span{itemprop: "name"} Payton Swick
+    %nav#primary-nav
+      %ul
+        %li= link_to(image_tag('twitter.png', alt: 'Twitter'), 'https://twitter.com/sirbrillig', title: '@sirbrillig on Twitter')
+        %li= link_to(image_tag('github.png', alt: 'Github'), 'https://github.com/sirbrillig', title: 'sirbrillig on GitHub')
+        %li= link_to(image_tag('linkedin.png', alt: 'LinkedIn'), 'https://www.linkedin.com/in/paytonswick', title: 'Payton on LinkedIn')
 
-%blockquote 
-  "Teaism... is essentially a worship of the imperfect, as it is a tender attempt to achieve something possible in this impossible thing we know as life."
-  %footer – 茶の本, Okakura
+  %blockquote 
+    "Teaism... is essentially a worship of the imperfect, as it is a tender attempt to achieve something possible in this impossible thing we know as life."
+    %footer – 茶の本, Okakura
 
-.content.about
-  %span
-    Vegan. Digital craftsman. Tea explorer. Avid learner of things. Writes code <a href="http://automattic.com/">@automattic</a>.
+  .content.about
+    Vegan. Digital craftsman. Tea explorer. Avid learner of things. Writes code <a href="http://automattic.com/"><span itemprop="worksFor" itemtype="http://schema.org/Organization">@<span itemprop="name">automattic</span></span></a>.
 
-.content.blogs
-  %span
+  .content.blogs
     %ul
       %li
         %a{href:"http://chaguan.foolord.com/"} Cha Guan
