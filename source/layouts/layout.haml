@@ -32,8 +32,3 @@
             %li= link_to(image_tag('linkedin.png', alt: 'LinkedIn'), 'https://www.linkedin.com/in/paytonswick', title: 'Payton on LinkedIn')
       %div{:role => "main", :class => "main"}= yield
       %footer
-    
-    = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"
-    :javascript
-      window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.8.0.min.js"><\/script>')
-    = javascript_include_tag "site"
