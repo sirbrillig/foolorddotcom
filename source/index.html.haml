@@ -2,14 +2,15 @@
 
   .content-box-column.column1
 
-    .content-box.about-box
-      .inner
-        .avatar= image_tag('wedding_avatar.jpg', title: 'Payton')
-        .title
-          %span{itemprop: "name"} Payton Swick
-        .description 
-          %p Vegan. Digital craftsman. Tea explorer. Avid learner of things.
-          %p <span itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">I write code <a itemprop="url" href="http://automattic.com/">@<span itemprop="name">automattic</span></a></span>.
+    %a.box-link{href: 'http://en.gravatar.com/sirbrillig'}
+      .content-box.about-box
+        .inner
+          .avatar= image_tag('wedding_avatar.jpg', title: 'Payton')
+          .title
+            %span{itemprop: "name"} Payton Swick
+          .description 
+            %p Vegan. Digital craftsman. Tea explorer. Avid learner of things.
+            %p <span itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">I write code <a itemprop="url" href="http://automattic.com/">@<span itemprop="name">automattic</span></a></span>.
 
     %a.box-link{href: 'https://someteawith.me/'}
       .content-box.tea-blog-box

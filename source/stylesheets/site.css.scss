@@ -43,6 +43,7 @@ a.box-link:visited {
 }
 
 .content-box {
+  position: relative;
   background: #ebecec;
   color: #000;
   opacity: 0.8;
@@ -113,11 +114,60 @@ a.box-link:visited {
 @media (max-width: 860px) {
   .content-box {
     .title {
-      font-size: 1em;
+      font-size: 1.3em;
     }
 
     .description {
       font-size: 0.8em;
     }
+  }
+
+  .avatar {
+    max-width: 150px;
+    max-height: 150px;
+  }
+}
+
+@media (max-width: 550px) {
+  .avatar {
+    max-width: 120px;
+    max-height: 120px;
+    background-position: 25% 15%;
+  }
+
+  .content-box {
+    .title {
+      font-size: 1em;
+      font-weight: bold;
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      top: 1em;
+      margin-left: -1rem;
+    }
+
+    .description {
+      display: none;
+    }
+  }
+}
+
+@media (max-height: 410px) {
+  .content-box {
+    .inner {
+      padding: 0.4em;
+    }
+
+    .icon {
+      float: left;
+      margin-right: 1rem;
+      font-size: 2.5rem;
+    }
+  }
+
+  .avatar {
+    max-width: 100px;
+    max-height: 100px;
+    background-position: 25% 15%;
   }
 }
