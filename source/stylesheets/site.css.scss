@@ -6,123 +6,93 @@
 
 */
 
-.page {
-  header {
-    font-size: 0.7em;
-  }
-
-  .content {
-    padding: 1rem;
-    text-align: center;
-    font-family: 'Arial Black', sans-serif;
-    font-size: 1.5rem;
-  }
-
-  nav {
-    background-image: none;
-    width: auto;
-  }
-
-  @media (min-width: 290px) {
-    nav {
-      background-image: image-url('teapot_black_small.png');
-      background-repeat: no-repeat;
-      background-position: center;
-      padding-bottom: 140px;
-      margin-left: auto;
-      width: 300px;
-    }
-  }
-
-  @media (min-width: 30em) {
-    nav {
-      li {
-        margin-left: .5em;
-      }
-    }
-  }
-
-  @media (min-width: 321px) {
-    blockquote {
-      font-size: 2rem;
-    }
-
-    nav {
-      background-image: image-url('teapot_black.png');
-    }
-  }
+html {
+  min-height: 100%;
+  position: relative;
 }
-
-a {
-  text-decoration: none;
-  color: #aaa;
-}
-
-a:visited {
-  color: #aaa;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 body {
-  background-image: image-url('45degreee_fabric.png'); 
+  height: 100%;
 }
 
-.blogs {
-  ul {
-    list-style: none;
-    padding: 0px;
-
-    li {
-      list-style: none;
-
-      span {
-        display: block;
-      }
-    }
-  }
-}
-.page .content.about {
+.content-box-area {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  min-height: 100%;
+  overflow: hidden;
   background-image: image-url('grey_wash_wall.png'); 
-  padding: 3rem;
 }
 
-header {
-  text-align: right;
-  background-image: image-url('dark_wall.png');
-  padding-right: 5em;
+.content-box-column {
+  width: 50%;
+  float: left;
+}
 
-  h1 {
-    font-family: 'Arial Black', sans-serif;
-    font-size: 5rem;
-    color: #dcdcdc;
-    margin: 0px;
+.content-box {
+  background: #ebecec;
+  color: #000;
+  opacity: 0.8;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  float: left;
+
+  .inner {
+    padding: 1rem;
   }
 
-  nav {
-    ul {
-      margin: 0px;
-      padding: 0px;
-    }
-    li {
-      display: inline;
-      padding-left: .2em;
-    }
-    li:hover {
+  .title {
+    font-size: 1.5em;
+  }
+
+  .description {
+    margin-top: 1em;
+  }
+
+  .icon {
+    float: left;
+    margin-right: 1rem;
+    font-size: 4rem;
+
+    .icon-light {
       opacity: 0.5;
     }
   }
 }
 
-blockquote {
-  text-align: center;
-  font-family: 'Arial Black', sans-serif;
-  font-size: 1.2rem;
+.tea-blog-box {
+  background: #0aa594;
+}
 
-  footer {
-    font-size: .6em;
-    text-align: right;
+.taiji-blog-box {
+  background: #45c5e5;
+}
+
+.github-box {
+  background: #be4856;
+}
+
+.twitter-box {
+  background: #364f86;
+}
+
+.linkedin-box {
+  background: #caffcc;
+}
+
+.avatar {
+  float: left;
+  margin-right: 1rem;
+  max-width: 200px;
+  max-height: 200px;
+  background: url('/images/wedding_avatar.jpg') no-repeat;
+  border-radius: 150px;
+  -moz-border-radius: 150px;
+  -webkit-border-radius: 150px;
+
+  img {
+    opacity: 0;
+    filter: alpha(opacity=0);
   }
 }
