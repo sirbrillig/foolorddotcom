@@ -97,3 +97,15 @@ body {
     filter: alpha(opacity=0);
   }
 }
+
+@media (max-width: 860px) {
+  .content-box {
+    .title {
+      font-size: 1em;
+    }
+
+    .description {
+      font-size: 0.8em;
+    }
+  }
+}
