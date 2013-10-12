@@ -11,16 +11,16 @@
           %p Vegan. Digital craftsman. Tea explorer. Avid learner of things.
           %p <span itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">I write code <a itemprop="url" href="http://automattic.com/">@<span itemprop="name">automattic</span></a></span>.
 
-    %a{href: 'https://someteawith.me/'}
+    %a.box-link{href: 'https://someteawith.me/'}
       .content-box.tea-blog-box
         .inner
           .icon.icon-stack
             %i.icon-circle.icon-stack-base.icon-light
             %i.icon-leaf
           .title someteawith.me
-          .description Tea is not what you think.
+          .description Tea is actually really cool.
 
-    %a{href: 'http://greenleaftaichi.com/'}
+    %a.box-link{href: 'http://greenleaftaichi.com/'}
       .content-box.taiji-blog-box
         .inner
           .icon.icon-stack
@@ -31,7 +31,7 @@
 
   .content-box-column.column2
 
-    %a{href: 'https://github.com/sirbrillig'}
+    %a.box-link{href: 'https://github.com/sirbrillig'}
       .content-box.github-box
         .inner
           .icon.icon-stack
@@ -40,16 +40,19 @@
           .title Github
           .description Read my code.
 
-    %a{href: 'https://twitter.com/sirbrillig'}
+    %a.box-link{href: 'https://twitter.com/sirbrillig'}
       .content-box.twitter-box
         .inner
           .icon.icon-stack
             %i.icon-circle.icon-stack-base.icon-light
             %i.icon-twitter
           .title Twitter
-          .description Random comments about things that interest me. @sirbrillig
+          .description 
+            %span For all the friends I've never met. 
+            %a{href:"https://twitter.com/sirbrillig"}
+              @sirbrillig
 
-    %a{href: 'https://www.linkedin.com/in/paytonswick'}
+    %a.box-link{href: 'https://www.linkedin.com/in/paytonswick'}
       .content-box.linkedin-box
         .inner
           .icon.icon-stack

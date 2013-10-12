@@ -14,6 +14,18 @@ body {
   height: 100%;
 }
 
+a,
+a:visited {
+  color: inherit;
+  text-decoration: underline;
+}
+
+a.box-link,
+a.box-link:visited {
+  color: #000;
+  text-decoration: none;
+}
+
 .content-box-area {
   width: 100%;
   position: absolute;
