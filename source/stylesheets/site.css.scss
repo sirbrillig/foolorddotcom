@@ -182,3 +182,24 @@ a.box-link:visited {
     background-size: 100px;
   }
 }
+
+@media (max-height: 200px) {
+  .content-box {
+    .inner {
+      padding: 0.4em;
+    }
+
+    .icon {
+      float: left;
+      margin-right: 1rem;
+      font-size: 1.3rem;
+    }
+  }
+
+  .avatar {
+    max-width: 40px;
+    max-height: 40px;
+    background-position: 25% 15%;
+    background-size: 80px;
+  }
+}
