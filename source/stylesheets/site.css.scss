@@ -153,6 +153,15 @@ a.box-link:visited {
   }
 }
 
+@media (max-height: 650px) {
+  .avatar {
+    max-width: 120px;
+    max-height: 120px;
+    background-position: 25% 15%;
+    background-size: 150px;
+  }
+}
+
 @media (max-height: 410px) {
   .content-box {
     .inner {
@@ -162,13 +171,14 @@ a.box-link:visited {
     .icon {
       float: left;
       margin-right: 1rem;
-      font-size: 2.5rem;
+      font-size: 1.8rem;
     }
   }
 
   .avatar {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 60px;
+    max-height: 60px;
     background-position: 25% 15%;
+    background-size: 100px;
   }
 }
