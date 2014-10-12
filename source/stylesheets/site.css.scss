@@ -31,6 +31,45 @@ div {
       margin: 0 2rem;
     }
   }
+
+  .scroll-button {
+    border: 0;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+    background: url('../images/chasen-icon.png');
+    background-repeat: no-repeat;
+    display: block;
+    width: 81px;
+    height: 130px;
+    animation: wiggle 300ms 2.5s 3 ease-out;
+
+    &:hover {
+      animation: hover-wiggle 300ms 2 ease-out;
+    }
+  }
+}
+
+@mixin wiggle-animation {
+  0%, 50%, 100% {
+    transform: rotate( 0deg );
+  }
+
+  25% {
+    transform: rotate( 20deg );
+  }
+
+  75% {
+    transform: rotate( -20deg );
+  }
+}
+
+@keyframes hover-wiggle {
+  @include wiggle-animation;
+}
+
+@keyframes wiggle {
+  @include wiggle-animation;
 }
 
 .menu-area {
