@@ -23,13 +23,35 @@ div {
     font-weight: bold;
   }
 
-  .icon-area {
-    position: absolute;
-    bottom: 1rem;
-    left: 0;
+  .social-links {
+    margin: 1rem 0;
 
     a {
-      margin: 0 2rem;
+      margin: 0.5rem;
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+      color: transparent;
+    }
+
+    .instagram-icon {
+      background: url('../images/instagram.png') no-repeat;
+      background-size: 40px;
+    }
+
+    .github-icon {
+      background: url('../images/github.png') no-repeat;
+      background-size: 40px;
+    }
+
+    .linkedin-icon {
+      background: url('../images/linkedin.png') no-repeat;
+      background-size: 40px;
+    }
+
+    .twitter-icon {
+      background: url('../images/twitter.png') no-repeat;
+      background-size: 40px;
     }
   }
 
