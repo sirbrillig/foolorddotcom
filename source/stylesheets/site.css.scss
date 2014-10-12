@@ -16,6 +16,7 @@ div {
   padding: 2rem;
   height: 80vh;
   background-color: #ccc;
+  background-image: url('../images/whitey.png');
 
   .name {
     font-size: 3rem;
@@ -33,15 +34,13 @@ div {
   }
 
   .scroll-button {
-    border: 0;
-    font: 0/0 a;
-    text-shadow: none;
-    color: transparent;
+    margin: 1rem auto 0 auto;
     background: url('../images/chasen-icon.png');
     background-repeat: no-repeat;
+    background-position-y: 2em;
     display: block;
     width: 81px;
-    height: 130px;
+    height: 200px;
     animation: wiggle 300ms 2.5s 3 ease-out;
 
     &:hover {
@@ -56,11 +55,11 @@ div {
   }
 
   25% {
-    transform: rotate( 20deg );
+    transform: rotate( 15deg );
   }
 
   75% {
-    transform: rotate( -20deg );
+    transform: rotate( -15deg );
   }
 }
 
