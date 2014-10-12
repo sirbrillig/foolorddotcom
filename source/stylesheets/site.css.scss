@@ -56,12 +56,18 @@ div {
   }
 
   .scroll-button {
+    text-decoration: none;
+    font-variant: small-caps;
+    font-size: 0.9rem;
+    text-align: center;
+
     margin: 1rem auto 0 auto;
     background: url('../images/chasen-icon.png');
     background-repeat: no-repeat;
-    background-position-y: 2em;
+    background-position-y: 2.9em;
+    background-position-x: 0.5em;
     display: block;
-    width: 81px;
+    width: 100px;
     height: 200px;
     animation: wiggle 300ms 2.5s 3 ease-out;
 
