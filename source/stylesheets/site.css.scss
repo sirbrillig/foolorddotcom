@@ -76,6 +76,11 @@ div {
     &:hover {
       animation: hover-wiggle 300ms 2 ease-out;
     }
+
+    @media (max-height: 470px) {
+      background: none;
+      height: 1em;
+    }
   }
 }
 
