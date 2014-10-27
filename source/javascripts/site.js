@@ -1,3 +1,11 @@
+/* global smoothScroll */
+(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    smoothScroll.init();
+  });
+})();
+
+// Google
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-38222960-1']);
 _gaq.push(['_trackPageview']);
