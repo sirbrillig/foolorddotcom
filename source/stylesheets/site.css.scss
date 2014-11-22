@@ -6,200 +6,152 @@
 
 */
 
-html {
-  min-height: 100%;
+div {
+  box-sizing: border-box;
+}
+
+.intro-area {
   position: relative;
-}
-body {
-  height: 100%;
-}
+  margin: 10vh 0;
+  padding: 2rem;
+  height: 80vh;
+  background-color: #ccc;
+  background-image: url('../images/whitey.png');
+  box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.55);
 
-a,
-a:visited {
-  color: inherit;
-  text-decoration: underline;
-}
-
-a.box-link,
-a.box-link:visited {
-  color: #000;
-  text-decoration: none;
-}
-
-.content-box-area {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  min-height: 100%;
-  overflow: hidden;
-  background-image: image-url('grey_wash_wall.png'); 
-}
-
-.content-box-column {
-  width: 50%;
-  height: 100%;
-  float: left;
-}
-
-.content-box {
-  position: relative;
-  background: #ebecec;
-  color: #000;
-  opacity: 0.8;
-  width: 100%;
-  height: 34%;
-  overflow: hidden;
-  float: left;
-
-  .inner {
-    padding: 1rem;
+  .intro-area--container {
+    margin: 8vh auto;
+    display: table;
   }
 
-  .title {
-    font-size: 1.5em;
+  .name {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
   }
 
+  .social-links {
+    a {
+      margin: 0.5rem;
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+      color: transparent;
+    }
+
+    .instagram-icon {
+      background: url('../images/instagram.png') no-repeat;
+      background-size: 40px;
+    }
+
+    .github-icon {
+      background: url('../images/github.png') no-repeat;
+      background-size: 40px;
+    }
+
+    .linkedin-icon {
+      background: url('../images/linkedin.png') no-repeat;
+      background-size: 40px;
+    }
+
+    .twitter-icon {
+      background: url('../images/twitter.png') no-repeat;
+      background-size: 40px;
+    }
+  }
+
+  .scroll-button {
+    text-decoration: none;
+    font-variant: small-caps;
+    font-size: 0.9rem;
+    text-align: center;
+
+    margin: 1rem auto 0 auto;
+    background: url('../images/chasen-icon.png');
+    background-repeat: no-repeat;
+    background-position-y: 2.9em;
+    background-position-x: 0.5em;
+    display: block;
+    width: 100px;
+    height: 170px;
+    animation: wiggle 300ms 2.5s 3 ease-out;
+
+    &:hover {
+      animation: hover-wiggle 300ms 2 ease-out;
+    }
+
+    @media (max-height: 470px) {
+      background: none;
+      height: 2em;
+      width: 200px;
+    }
+  }
+}
+
+@mixin wiggle-animation {
+  0%, 50%, 100% {
+    transform: rotate( 0deg );
+  }
+
+  25% {
+    transform: rotate( 15deg );
+  }
+
+  75% {
+    transform: rotate( -15deg );
+  }
+}
+
+@keyframes hover-wiggle {
+  @include wiggle-animation;
+}
+
+@keyframes wiggle {
+  @include wiggle-animation;
+}
+
+.menu-area {
+  position: relative;
+  margin: 10vh 0;
+  padding: 2rem;
+  background-color: #fdfdfd;
+  box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.55);
+
+  .name,
   .description {
-    margin-top: 1em;
-  }
-
-  .icon {
-    float: left;
-    margin-right: 1rem;
-    font-size: 4rem;
-
-    .icon-light {
-      opacity: 0.5;
-    }
-  }
-}
-
-.tea-blog-box {
-  background: #0aa594;
-}
-
-.taiji-blog-box {
-  background: #45c5e5;
-}
-
-.github-box {
-  background: #be4856;
-}
-
-.twitter-box {
-  background: #364f86;
-}
-
-.linkedin-box {
-  background: #caffcc;
-}
-
-.avatar {
-  float: left;
-  margin-right: 1rem;
-  max-width: 200px;
-  max-height: 200px;
-  background: url('/images/wedding_avatar.jpg') no-repeat;
-  border-radius: 150px;
-  -moz-border-radius: 150px;
-  -webkit-border-radius: 150px;
-
-  img {
-    opacity: 0;
-    filter: alpha(opacity=0);
-  }
-}
-
-@media (max-width: 860px) {
-  .content-box {
-    .title {
-      font-size: 1.3em;
-    }
-
-    .description {
-      font-size: 0.8em;
+    @media (min-width: 600px) {
+      font-size: 2rem;
+      line-height: 2;
     }
   }
 
-  .avatar {
-    max-width: 150px;
-    max-height: 150px;
-  }
-}
-
-@media (max-width: 570px) {
-  .avatar {
-    max-width: 120px;
-    max-height: 120px;
-    background-position: 25% 15%;
-  }
-
-  .content-box {
-    .title {
-      font-size: 1em;
-      font-weight: bold;
-      text-align: center;
-      width: 110%;
-      position: absolute;
-      top: 1em;
-      margin-left: -1rem;
-      background-color: rgba(255, 255, 255, 0.6);
+  .menu-links {
+    .header {
+      margin: 2rem 0 1rem 0;
+      font-size: 1.5rem;
     }
 
-    .description {
-      display: none;
+    .menu-link {
+      display: inline;
+      margin: 0 1rem 0 0;
+
+      .menu-link--title {
+        font-size: 1.2rem;
+        display: inline;
+
+        a {
+          color: #000;
+          text-decoration: none;
+          background: url('../images/wordpress.png') no-repeat;
+          padding-left: 80px;
+          line-height: 70px;
+          display: block;
+          @media (min-width: 600px) {
+            width: 23%;
+            display: inline-block;
+          }
+        }
+      }
     }
-  }
-}
-
-@media (max-height: 650px) {
-  .avatar {
-    max-width: 120px;
-    max-height: 120px;
-    background-position: 25% 15%;
-    background-size: 150px;
-  }
-}
-
-@media (max-height: 410px) {
-  .content-box {
-    .inner {
-      padding: 0.4em;
-    }
-
-    .icon {
-      float: left;
-      margin-right: 1rem;
-      font-size: 1.8rem;
-    }
-  }
-
-  .avatar {
-    max-width: 60px;
-    max-height: 60px;
-    background-position: 25% 15%;
-    background-size: 100px;
-  }
-}
-
-@media (max-height: 200px) {
-  .content-box {
-    .inner {
-      padding: 0.4em;
-    }
-
-    .icon {
-      float: left;
-      margin-right: 1rem;
-      font-size: 1.3rem;
-    }
-  }
-
-  .avatar {
-    max-width: 40px;
-    max-height: 40px;
-    background-position: 25% 15%;
-    background-size: 80px;
   }
 }

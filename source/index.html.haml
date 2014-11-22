@@ -1,63 +1,29 @@
-.content-box-area.inside{itemscope: true, itemtype: "http://schema.org/Person"}
+#top.intro-area
+  .intro-area--container
+    .name
+      Payton
+    %a.scroll-button{:href => '#menu-area', :'data-scroll' => ''}
+      scroll down, traveller
+    .social-links
+      %a.twitter-icon{:href => 'https://twitter.com/sirbrillig'} Twitter
+      %a.github-icon{:href => 'https://github.com/sirbrillig'} Github
+      %a.instagram-icon{:href => 'http://instagram.com/sirbrillig'} Instagram
+      %a.linkedin-icon{:href => 'http://www.linkedin.com/in/paytonswick/'} Linkedin
 
-  .content-box-column.column1
-
-    %a.box-link{href: 'http://en.gravatar.com/sirbrillig'}
-      .content-box.about-box
-        .inner
-          .avatar= image_tag('wedding_avatar.jpg', title: 'Payton')
-          .title
-            %span{itemprop: "name"} Payton Swick
-          .description 
-            %p Vegan. Digital craftsman. Tea explorer. Avid learner of things.
-            %p <span itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">I write code <a itemprop="url" href="http://automattic.com/">@<span itemprop="name">automattic</span></a></span>.
-
-    %a.box-link{href: 'http://someteawith.me/'}
-      .content-box.tea-blog-box
-        .inner
-          .icon.icon-stack
-            %i.icon-circle.icon-stack-base.icon-light
-            %i.icon-leaf
-          .title someteawith.me
-          .description Tea is actually really cool.
-
-    %a.box-link{href: 'http://greenleaftaichi.com/'}
-      .content-box.taiji-blog-box
-        .inner
-          .icon.icon-stack
-            %i.icon-circle.icon-stack-base.icon-light 
-            %i.icon-custom ☯
-          .title Green Leaf Tai Chi
-          .description Be present.
-
-  .content-box-column.column2
-
-    %a.box-link{href: 'http://github.com/sirbrillig'}
-      .content-box.github-box
-        .inner
-          .icon.icon-stack
-            %i.icon-circle.icon-stack-base.icon-light
-            %i.icon-github
-          .title Github
-          .description Read my code.
-
-    %a.box-link{href: 'http://twitter.com/sirbrillig'}
-      .content-box.twitter-box
-        .inner
-          .icon.icon-stack
-            %i.icon-circle.icon-stack-base.icon-light
-            %i.icon-twitter
-          .title Twitter
-          .description 
-            %span For all the friends I've never met. 
-            %a{href:"http://twitter.com/sirbrillig"}
-              @sirbrillig
-
-    %a.box-link{href: 'http://www.linkedin.com/in/paytonswick'}
-      .content-box.linkedin-box
-        .inner
-          .icon.icon-stack
-            %i.icon-circle.icon-stack-base.icon-light
-            %i.icon-linkedin
-          .title LinkedIn
-          .description My professional info.
+#menu-area.menu-area
+  .name
+    Hi! I'm Payton.
+  .description
+    I like to write things, play with code, and create. But more than anything else, I enjoy exploring and learning about this amazing world in which I live.
+  .menu-links
+    .header
+      My Blogs:
+    .menu-link
+      .menu-link--title
+        %a.someteawith{:href => 'http://someteawith.me/'} Some Tea With Me
+    .menu-link
+      .menu-link--title
+        %a.whatpaytonfound{:href => 'https://whatpaytonfound.wordpress.com/'} What Payton Found
+    .menu-link
+      .menu-link--title
+        %a.greenleaftaichi{:href => 'http://greenleaftaichi.com'} Green Leaf Tai Chi
