@@ -119,8 +119,10 @@ div {
 
   .name,
   .description {
-    font-size: 2rem;
-    line-height: 2;
+    @media (min-width: 600px) {
+      font-size: 2rem;
+      line-height: 2;
+    }
   }
 
   .menu-links {
@@ -140,11 +142,14 @@ div {
         a {
           color: #000;
           text-decoration: none;
-          width: 25%;
           background: url('../images/wordpress.png') no-repeat;
           padding-left: 80px;
           line-height: 70px;
-          display: inline-block;
+          display: block;
+          @media (min-width: 600px) {
+            width: 23%;
+            display: inline-block;
+          }
         }
       }
     }
