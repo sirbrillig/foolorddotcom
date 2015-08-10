@@ -12,15 +12,15 @@ div {
 
 .intro-area {
   position: relative;
-  margin: 10vh 0;
+  margin: 0;
   padding: 2rem;
-  height: 80vh;
+  height: 100vh;
   background-color: #ccc;
   background-image: url('../images/whitey.png');
   box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.55);
 
   .intro-area--container {
-    margin: 8vh auto;
+    margin: 20vh auto 0 auto;
     display: table;
   }
 
@@ -31,6 +31,8 @@ div {
   }
 
   .social-links {
+    text-align: center;
+
     a {
       margin: 0.5rem;
       width: 40px;
@@ -60,24 +62,22 @@ div {
     }
   }
 
-  .scroll-button {
+  .scroll-button-image {
     text-decoration: none;
-    font-variant: small-caps;
-    font-size: 0.9rem;
-    text-align: center;
 
     margin: 1rem auto 0 auto;
-    background: url('../images/chasen-icon.png');
+    background: url('../images/chasen-icon-down.png');
     background-repeat: no-repeat;
-    background-position-y: 2.9em;
+    background-position-y: 0.5em;
     background-position-x: 0.5em;
     display: block;
     width: 100px;
     height: 170px;
-    animation: wiggle 300ms 2.5s 3 ease-out;
+    transform-origin: top center;
+    animation: wiggle 200ms 2s 4 ease-out;
 
     &:hover {
-      animation: hover-wiggle 300ms 2 ease-out;
+      animation: hover-wiggle 200ms 4 ease-out;
     }
 
     @media (max-height: 470px) {
@@ -85,6 +85,22 @@ div {
       height: 2em;
       width: 200px;
     }
+  }
+
+  .scroll-button-text {
+    border-radius: 24px;
+    color: #ffffff;
+    font-size: 18px;
+    background: #BE7830;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    text-align: center;
+    position: absolute;
+    bottom: 4vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 250px;
   }
 }
 
@@ -94,11 +110,11 @@ div {
   }
 
   25% {
-    transform: rotate( 15deg );
+    transform: rotate( 8deg );
   }
 
   75% {
-    transform: rotate( -15deg );
+    transform: rotate( -8deg );
   }
 }
 
@@ -111,47 +127,23 @@ div {
 }
 
 .menu-area {
-  position: relative;
-  margin: 10vh 0;
-  padding: 2rem;
+  height: 100vh;
   background-color: #fdfdfd;
-  box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.55);
 
-  .name,
-  .description {
-    @media (min-width: 600px) {
-      font-size: 2rem;
-      line-height: 2;
-    }
+  .menu-area--container {
+    max-width: 800px;
+    margin: 0 auto 0 auto;
+    padding-top: 25vh;
   }
 
-  .menu-links {
-    .header {
-      margin: 2rem 0 1rem 0;
-      font-size: 1.5rem;
-    }
+  .name {
+    font-size: 1.5em;
+  }
 
-    .menu-link {
-      display: inline;
-      margin: 0 1rem 0 0;
-
-      .menu-link--title {
-        font-size: 1.2rem;
-        display: inline;
-
-        a {
-          color: #000;
-          text-decoration: none;
-          background: url('../images/wordpress.png') no-repeat;
-          padding-left: 80px;
-          line-height: 70px;
-          display: block;
-          @media (min-width: 600px) {
-            width: 23%;
-            display: inline-block;
-          }
-        }
-      }
+  .description {
+    @media (min-width: 600px) {
+      font-size: 1.2em;
+      line-height: 1.4;
     }
   }
 }
