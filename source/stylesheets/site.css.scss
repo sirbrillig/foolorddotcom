@@ -15,6 +15,7 @@ div {
   margin: 0;
   padding: 2rem;
   height: 100vh;
+  min-height: 280px;
   background-color: #ccc;
   background-image: url('../images/whitey.png');
   box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.55);
@@ -140,6 +141,7 @@ div {
   font-family: monospace;
   font-size: 1.1em;
   height: 100vh;
+  min-height: 500px;
   color: #fff;
   background-color: #fdfdfd;
   background-image: url('../images/golden_teacup.png');
