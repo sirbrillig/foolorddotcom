@@ -18,11 +18,11 @@ layout: layout.html
   <div class="menu-area__container">
     <div class="name">Hi! I'm Payton.</div>
     <div class="description">
-        I like to hand-craft code to create things on the virtual canvas of the digital realm... or possibly I just like to sit around and drink tea. I always get those two mixed up.
+        <p>I like to hand-craft code to create things on the virtual canvas of the digital realm... or possibly I just like to sit around and drink tea. I always get those two mixed up.</p>
 
-        I write about [tea](http://someteawith.me/) a lot, but I also have been known to write about [other things](https://whatpaytonfound.wordpress.com/).
+        <p>I write about [tea](http://someteawith.me/) a lot, but I also have been known to write about [other things](https://whatpaytonfound.wordpress.com/).</p>
 
-        During the day I work on web application development at [Automattic](https://automattic.com/), but if I'm not doing anything else you'll find me talking about things on [Twitter](https://twitter.com/sirbrillig) and posting code on [Github](https://github.com/sirbrillig).
+        <p>During the day I work on web application development at [Automattic](https://automattic.com/), but if I'm not doing anything else you'll find me talking about things on [Twitter](https://twitter.com/sirbrillig) and posting code on [Github](https://github.com/sirbrillig).</p>
     </div>
   </div>
 </div>
