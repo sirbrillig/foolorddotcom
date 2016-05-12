@@ -2,5 +2,5 @@
 *.scssc
 *.sw?
 sass-cache/
-
+node_modules
 build/
