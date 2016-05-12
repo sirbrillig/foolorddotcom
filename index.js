@@ -14,7 +14,7 @@ Metalsmith(__dirname)
     })
     .source('./src')
     .destination('./build')
-    .clean(false)
+    .clean(true)
     .use(sass({
         outputDir: 'css/'   // This changes the output dir to "build/css/" instead of "build/scss/"
     }))
