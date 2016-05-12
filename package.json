@@ -2,7 +2,8 @@
   "name": "foolorddotcom",
   "private": true,
   "scripts": {
-    "build": "node index.js"
+    "build": "node index.js",
+    "deploy": "npm run build && surge --project build"
   },
   "dependencies": {
     "handlebars": "^4.0.5",
