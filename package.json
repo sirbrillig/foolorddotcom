@@ -4,7 +4,9 @@
   "scripts": {
     "build": "node index.js",
     "deploy": "npm run build && surge --project build",
-    "watch": "nodemon --ext js,scss,md,html --watch src --watch layouts --exec \"npm run build\""
+    "browse": "open build/index.html",
+    "monitor": "nodemon --ext js,scss,md,html --watch src --watch layouts --exec \"npm run build\"",
+    "watch": "npm run browse && npm run monitor"
   },
   "dependencies": {
     "handlebars": "^4.0.5",
