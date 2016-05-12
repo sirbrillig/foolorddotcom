@@ -4,14 +4,14 @@ layout: layout.html
 <div id="top" class="intro-area">
   <div class="intro-area__container">
     <div class="name">Payton Swick</div>
-    <a class="scroll-button-image" href="#menu-area">&nbsp;</a>
+    <a class="scroll-button-image" data-scroll href="#menu-area">&nbsp;</a>
     <div class="social-links">
       <a class="social-links__icon twitter-icon" href="https://twitter.com/sirbrillig">Twitter</a>
       <a class="social-links__icon github-icon" href="https://github.com/sirbrillig">Github</a>
       <a class="social-links__icon instagram-icon" href="https://instagram.com/sirbrillig">Instagram</a>
       <a class="social-links__icon linkedin-icon" href="https://linkedin.com/in/paytonswick/">Linkedin</a>
     </div>
-    <a class="scroll-button-text" href="#menu-area">Scroll down, Traveller</a>
+    <a class="scroll-button-text" data-scroll href="#menu-area">Scroll down, Traveller</a>
   </div>
 </div>
 <div id="menu-area" class="menu-area">
