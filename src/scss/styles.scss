@@ -6,6 +6,15 @@ div {
   box-sizing: border-box;
 }
 
+.narration-mode .progressive {
+  opacity: 0;
+  transition: opacity 700ms ease-in-out;
+}
+
+.progressive.progressive--show {
+  opacity: 1;
+}
+
 .intro-area {
   position: relative;
   margin: 0;
