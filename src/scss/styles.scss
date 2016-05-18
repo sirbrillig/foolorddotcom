@@ -32,6 +32,17 @@ div {
   opacity: 1;
 }
 
+a.about-icon {
+  text-decoration: none;
+}
+
+.about-icon svg {
+  fill: #fff;
+  width: 40px;
+  height: auto;
+  vertical-align: middle;
+}
+
 .content {
   position: relative;
   margin: 0;
