@@ -16,11 +16,10 @@ layout: layout.html
       <a class="social-links__icon linkedin-icon" href="https://linkedin.com/in/paytonswick/">Linkedin</a>
     </div>
   </div>
-  <div id="about" class="about-area progressive">
+  <div id="about" class="about">
     <p class="narration">You wait as the apparition massages its eyes.</p>
     <blockquote>"About me? Ah yes, well, I write code for [Automattic](https://automattic.com), and also for myself. You can see some of it on [GitHub](https://github.com/sirbrillig)."</blockquote>
     <p class="narration">The hologram turns and looks at something you can't see.</p>
-    <blockquote>"Oh, and I blog a bit. There's some ramblings about [tea](http://someteawith.me), and also [my writings on code and life](https://payton.codes) that you may find interesting."</blockquote>
-    <a class="back-icon" href="#top">Continue</a>
+    <blockquote>"Oh, and I blog a bit. There's some [ramblings about tea](http://someteawith.me), and also [my writings on code and life](https://payton.codes) that you may find interesting."</blockquote>
   </div>
 </div>
