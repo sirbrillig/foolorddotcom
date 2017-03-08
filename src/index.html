@@ -1,120 +1,127 @@
 <!doctype html>
 <html amp lang="en">
-  <head>
-    <meta charset="utf-8">
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <title>foolord.com</title>
-    <meta name="description" content="Payton Swick. Web developer. Vegan. Tea explorer. Writes code at Automattic.">
-    <link rel="canonical" href="http://foolord.com" />
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <style amp-custom>
+	<head>
+		<meta charset="utf-8">
+		<script async src="https://cdn.ampproject.org/v0.js"></script>
+		<title>foolord.com</title>
+		<meta name="description" content="Payton Swick. Web developer. Vegan. Tea explorer. Writes code at Automattic.">
+		<link rel="canonical" href="http://foolord.com" />
+		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+		<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+			<style amp-custom>
 body {
-  margin: 0;
-  background-color: #302217;
+	margin: 0;
+	background-color: #302217;
+	overflow-x: hidden;
 }
 
-div {
-  box-sizing: border-box;
-}
-
-.footer-area {
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-.footer-area a, .footer-area a:visited {
-  color: #efaf8b;
+* {
+	box-sizing: border-box;
 }
 
 .social-links {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 .social-links__icon {
-  margin: 0;
-  padding: 1.2em;
+	margin: 0;
+	padding: 1.2em;
 }
 
 .menu-area {
-  font-family: monospace;
-  font-size: 1.2em;
-  min-height: 500px;
-  color: #000;
-  text-align: center;
+	font-family: monospace;
+	font-size: 1.2em;
+	min-height: 500px;
+	color: #000;
+	text-align: center;
 }
 
-.menu-area__container {
-  max-width: 800px;
-  margin: 0 auto 0 auto;
-  padding: 1em 2em;
-  background-color: #f6f1e4;
+.menu-area {
+	max-width: 800px;
+	margin: 0 auto 0 auto;
+	padding: 1em 2em 0 2em;
+	background-color: #f6f1e4;
 }
 
-.menu-area__container a, .menu-area__container a:visited {
-  color: #b04d14;
+.menu-area a, .menu-area a:visited {
+	color: #b04d14;
 }
 
 .menu-area__name {
-  font-size: 1.5em;
+	font-size: 1.5em;
+	font-weight: 500;
 }
 
 .menu-area__row {
-  display: flex;
-  justify-content: space-around;
+	display: flex;
+	justify-content: space-around;
 }
 
 .menu-area__block {
-  padding: 10px;
+	padding: 10px;
 }
 
 @media (min-width: 600px) {
-  .menu-area__description {
-    font-size: 1.2em;
-    line-height: 1.4;
-  }
+	.menu-area__description {
+		font-size: 1.2em;
+		line-height: 1.4;
+	}
 }
 
 .divider {
-  padding: 1em 0;
-  height: 18px;
-  width: auto;
+	padding: 1em 0;
+	height: 18px;
+	width: auto;
+	box-sizing: content-box;
 }
 
 .header-image {
 	margin: auto;
 }
 
-    </style>
-  </head>
-  <body>
-    <div role="main" class="main">
-      <div class="menu-area">
-        <amp-img class="header-image" src="images/golden_teacup_small.jpg" srcset="images/golden_teacup_larger.jpeg 1400w, images/golden_teacup_small.jpg 500w" sizes="(min-width: 1400px) 800px, 100vw" alt="A Teacup" layout="responsive" width="500px" height="180px"></amp-img>
-        <div class="menu-area__container">
-          <div class="menu-area__name">Payton Swick.</div>
-          <div class="menu-area__description">
-            <p>Crafting hand-made, artisan code for over 20 years.</p>
+.footer-area {
+	text-align: center;
+	font-size: 0.9rem;
+	background-color: #302217;
+	margin: 0 -100vw;
+	padding: 0 100vw;
+	display: flex;
+	justify-content: center;
+}
 
-            <svg class="divider" viewbox="0 0 291 23" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><title>Layer 2</title><path fill="none" stroke="#4b4b4b" stroke-width="2" stroke-miterlimit="10" d="M14.308 11.455h264"/><path fill="#4b4b4b" d="M286.474 11.467l-9.053-9.053-9.05 9.053 9.05 9.053 9.054-9.053zM22.307 11.467l-9.053-9.053-9.052 9.053 9.052 9.053 9.053-9.053z"/><path fill="none" stroke="#4b4b4b" stroke-width="2" stroke-miterlimit="10" d="M11.5 23.166L0 11.666 11.583 0M279.262 23.166l11.5-11.5L279.177 0"/><path fill="none" stroke="#4b4b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M99.448 17.57h104M99.448 5.57h104"/></svg>
+.footer-area a, .footer-area a:visited {
+	color: #efaf8b;
+}
 
-            <div class="menu-area__row"><div class="menu-area__block">Writing about <a href="http://someteawith.me/">tea</a>.</div><div class="menu-area__block">Writing about <a href="https://payton.codes/">code</a>.</div></div>
+			</style>
+	</head>
+	<body>
+		<main role="main">
+		<article class="menu-area">
+			<header>
+				<amp-img class="header-image" src="images/golden_teacup_small.jpg" srcset="images/golden_teacup_larger.jpeg 1400w, images/golden_teacup_small.jpg 500w" sizes="(min-width: 1400px) 800px, 100vw" alt="A Teacup" layout="responsive" width="500px" height="180px"></amp-img>
+				<h1 class="menu-area__name">Payton Swick.</h1>
+				<p class="menu-area__description">Crafting hand-made, artisan code for over 20 years.</p>
 
-            <p>Developing the webs at <a href="https://automattic.com/">Automattic</a>.</p>
-          </div> <!-- .menu-area__description -->
-          <div class="social-links">
-            <a class="social-links__icon twitter-icon" href="https://twitter.com/sirbrillig">Twitter</a>
-            <a class="social-links__icon github-icon" href="https://github.com/sirbrillig">Github</a>
-            <a class="social-links__icon instagram-icon" href="https://instagram.com/sirbrillig">Instagram</a>
-            <a class="social-links__icon linkedin-icon" href="https://linkedin.com/in/paytonswick/">Linkedin</a>
-          </div> <!-- .social-links -->
-        </div> <!-- .menu-area__container -->
-      </div> <!-- .menu-area -->
-      <div class="footer-area">
-        <p><a href='http://www.freepik.com/free-vector/vintage-sticker-collection_839640.htm'>Divider Designed by Freepik</a></p>
-      </div>
-    </div> <!-- .main -->
-  </body>
+				<svg class="divider" viewbox="0 0 291 23" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><title>Layer 2</title><path fill="none" stroke="#4b4b4b" stroke-width="2" stroke-miterlimit="10" d="M14.308 11.455h264"/><path fill="#4b4b4b" d="M286.474 11.467l-9.053-9.053-9.05 9.053 9.05 9.053 9.054-9.053zM22.307 11.467l-9.053-9.053-9.052 9.053 9.052 9.053 9.053-9.053z"/><path fill="none" stroke="#4b4b4b" stroke-width="2" stroke-miterlimit="10" d="M11.5 23.166L0 11.666 11.583 0M279.262 23.166l11.5-11.5L279.177 0"/><path fill="none" stroke="#4b4b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M99.448 17.57h104M99.448 5.57h104"/></svg>
+			</header>
+			<nav>
+				<div class="menu-area__row"><div class="menu-area__block">Writing about <a href="http://someteawith.me/">tea</a>.</div><div class="menu-area__block">Writing about <a href="https://payton.codes/">code</a>.</div></div>
+
+				<p>Developing the webs at <a href="https://automattic.com/">Automattic</a>.</p>
+			</nav>
+			<nav class="social-links">
+				<a class="social-links__icon twitter-icon" href="https://twitter.com/sirbrillig">Twitter</a>
+				<a class="social-links__icon github-icon" href="https://github.com/sirbrillig">Github</a>
+				<a class="social-links__icon instagram-icon" href="https://instagram.com/sirbrillig">Instagram</a>
+				<a class="social-links__icon linkedin-icon" href="https://linkedin.com/in/paytonswick/">Linkedin</a>
+			</nav> <!-- .social-links -->
+			<footer class="footer-area">
+				<p><a href='http://www.freepik.com/free-vector/vintage-sticker-collection_839640.htm'>Divider Designed by Freepik</a></p>
+			</footer>
+		</article>
+		</main>
+	</body>
 </html>
