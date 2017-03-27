@@ -13,6 +13,7 @@ body {
 	margin: 0;
 	background-color: #302217;
 	overflow-x: hidden;
+	font-size: 14px;
 }
 
 * {
@@ -32,16 +33,17 @@ body {
 
 .bio {
 	font-family: monospace;
-	font-size: 1.2em;
+	font-size: 1.1em;
 	min-height: 500px;
 	color: #000;
 	text-align: center;
-}
-
-.bio {
 	max-width: 800px;
 	margin: 0 auto 0 auto;
-	padding: 1em 2em 0 2em;
+	background-color: #f6f1e4;
+}
+
+.bio > nav {
+	padding: 0.5em 2em 0 2em;
 	background-color: #f6f1e4;
 }
 
@@ -60,12 +62,16 @@ body {
 }
 
 .bio__block {
-	padding: 10px;
+	padding: 0.5em;
+}
+
+.bio__description {
+	margin: 1em;
 }
 
 @media (min-width: 600px) {
-	.bio__description {
-		font-size: 1.2em;
+	.bio {
+		font-size: 1.3em;
 		line-height: 1.4;
 	}
 }
@@ -89,6 +95,12 @@ body {
 	padding: 0 100vw;
 	display: flex;
 	justify-content: center;
+	margin-top: 1em;
+}
+
+.footer-area p {
+	margin: 1em 0;
+	font-family: initial;
 }
 
 .footer-area a, .footer-area a:visited {
@@ -101,7 +113,7 @@ body {
 		<main role="main">
 		<article class="bio">
 			<header>
-				<amp-img class="header-image" src="images/golden_teacup_small.jpg" srcset="images/golden_teacup_larger.jpeg 1400w, images/golden_teacup_small.jpg 500w" sizes="(min-width: 1400px) 800px, 100vw" alt="A Teacup" layout="responsive" width="500px" height="180px"></amp-img>
+				<amp-img class="header-image" src="images/golden_teacup_small.jpg" srcset="images/golden_teacup_larger.jpeg 1400w, images/golden_teacup_small.jpg 500w" sizes="(min-width: 800px) 800px, 100vw" alt="A Teacup" layout="responsive" width="500px" height="180px"></amp-img>
 				<h1 class="bio__name">Payton Swick.</h1>
 				<p class="bio__description">Crafting hand-made, artisan code for over 20 years.</p>
 
