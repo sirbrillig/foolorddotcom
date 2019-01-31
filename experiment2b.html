@@ -36,10 +36,18 @@ div {
   position: relative;
   top: -100vh;
   transition: top 1.5s cubic-bezier(0.01, 0.22, 0.80, 1.11);
+  display: flex;
 }
 
 .display-panel__text {
   opacity: 0;
+  padding: 1em;
+  flex: 1;
+}
+
+.display-panel__image img {
+  border: 4px solid black;
+  box-sizing: content-box;
 }
 
 .display-panel__text--active {
@@ -252,10 +260,15 @@ window.onload = function() {
               He makes software that powers the web.
             </div>
             <div class="ai-text" data-text-order="4">
-              Sometimes that software talks.
+              Sometimes that software can talk.
             </div>
             <div class="ai-text" data-text-order="5">
               Like me.
+            </div>
+          </div>
+          <div class="display-panel__image">
+            <div class="ai-image" data-text-order="2">
+              <img src="images/avatar-chapoquoit-square.jpg" />
             </div>
           </div>
         </div>
