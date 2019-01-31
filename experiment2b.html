@@ -45,9 +45,23 @@ div {
   flex: 1;
 }
 
+.ai-button {
+  opacity: 0;
+  transition: opacity 1.5s cubic-bezier(0.01, 0.22, 0.80, 1.11);
+}
+
+.ai-button a:visited,
+.ai-button a {
+  color: #fff;
+}
+
+.ai-button--active {
+  opacity: 1;
+}
+
 .ai-image {
   opacity: 0;
-  transition: all 1.5s cubic-bezier(0.01, 0.22, 0.80, 1.11);
+  transition: opacity 1.5s cubic-bezier(0.01, 0.22, 0.80, 1.11);
 }
 
 .ai-image img {
@@ -203,6 +217,24 @@ function typeLetters(element, letters, index, resolver) {
   });
 }
 
+function getShowAiButtonNumber(textNumber) {
+  return function showAiImage() {
+    console.log(`showing button number ${textNumber}`);
+    return new Promise((resolve, reject) => {
+      const image = document.querySelector(`.ai-button[data-text-order='${textNumber}']`);
+      if (! image) {
+        console.error(`could not find AI button number ${textNumber}`);
+        reject();
+        return;
+      }
+      setTimeout(() => {
+        image.className += ' ai-button--active';
+        return resolve();
+      }, 300);
+    });
+  }
+}
+
 function getShowImageNumber(textNumber) {
   return function showAiImage() {
     console.log(`showing image number ${textNumber}`);
@@ -258,6 +290,7 @@ function showAiTextArea() {
     .then(getShowAiTextNumber(3))
     .then(getShowAiTextNumber(4))
     .then(getDelayedFunction(900, getShowAiTextNumber(5)))
+    .then(getDelayedFunction(900, getShowAiButtonNumber(5)))
     .then(() => console.log('done'))
 }
 
@@ -294,6 +327,9 @@ window.onload = function() {
             </div>
             <div class="ai-text" data-text-order="5">
               Like me.
+            </div>
+            <div class="ai-button" data-text-order="5">
+              <a href="#">Continue →</a>
             </div>
           </div>
           <div class="display-panel__image">
