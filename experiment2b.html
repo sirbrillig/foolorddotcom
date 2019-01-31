@@ -33,7 +33,6 @@ div {
   font-family: monospace;
   font-size: 2.5em;
   padding: 2em;
-  text-shadow: 0px 0px 30px #baff00;
   position: relative;
   top: -100vh;
   transition: all 1.5s cubic-bezier(0.01, 0.22, 0.80, 1.11);
@@ -45,6 +44,22 @@ div {
 
 .display-panel__text--active {
   animation: flicker-in-2 2s linear both;
+}
+
+.initial-ai-text {
+  text-shadow: 0px 0px 5px #8cb325;
+}
+
+.ai-text {
+  text-shadow: 0px 0px 5px #8cb325;
+  max-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.ai-text--active {
+  max-width: 100%;
 }
 
 /* ----------------------------------------------
@@ -153,19 +168,49 @@ div {
 }
     </style>
     <script language="javascript">
-window.onload = function() {
+
+function typeLetters(element, letters, index) {
+  const typingDelay = 160;
+  index = index || 0;
+  const visibleLetters = letters.slice(0, index);
+  element.innerText = visibleLetters;
+  if (! element.className.includes('ai-text--active')) {
+    element.className = element.className + ' ai-text--active';
+  }
+  if (visibleLetters.length < letters.length) {
+    setTimeout(() => typeLetters(element, letters, index + 1), typingDelay);
+  }
+}
+
+function showAiTextNumber(textNumber) {
+  const text = document.querySelector(`.ai-text[data-text-order='${textNumber}']`);
+  if (! text) {
+    console.error(`could not find AI text area number ${textNumber}`);
+    return;
+  }
+  setTimeout(() => typeLetters(text, text.innerText), 300);
+}
+
+function showAiTextArea() {
+  const text = document.querySelector('.display-panel__text');
+  if (! text) {
+    return;
+  }
+  text.className = text.className + ' display-panel__text--active';
+  setTimeout( () => showAiTextNumber(2), 1500 );
+}
+
+function showScreen() {
   const screen = document.querySelector('.display-panel__screen');
   if (! screen) {
     return;
   }
   screen.style.top = '0px';
-  setTimeout( function() {
-    const text = document.querySelector('.display-panel__text');
-    if (! text) {
-      return;
-    }
-    text.className = text.className + ' display-panel__text--active';
-  }, 1200 );
+  setTimeout( showAiTextArea, 1200 );
+}
+
+window.onload = function() {
+  showScreen();
 }
     </script>
   </head>
@@ -174,7 +219,21 @@ window.onload = function() {
       <div class="display-panel">
         <div class="display-panel__screen">
           <div class="display-panel__text">
-            Hello world
+            <div class="initial-ai-text" data-text-order="1">
+              Hello world.
+            </div>
+            <div class="ai-text" data-text-order="2">
+              This is Payton.
+            </div>
+            <div class="ai-text" data-text-order="3">
+              He makes software that powers the web.
+            </div>
+            <div class="ai-text" data-text-order="4">
+              Sometimes that software talks.
+            </div>
+            <div class="ai-text" data-text-order="5">
+              Like me. 😁
+            </div>
           </div>
         </div>
       </div>
