@@ -35,7 +35,7 @@ div {
   padding: 2em;
   position: relative;
   top: -100vh;
-  transition: all 1.5s cubic-bezier(0.01, 0.22, 0.80, 1.11);
+  transition: top 1.5s cubic-bezier(0.01, 0.22, 0.80, 1.11);
 }
 
 .display-panel__text {
@@ -172,7 +172,8 @@ function typeLetters(element, letters, index, resolver) {
     const typingDelay = 100;
     index = index || 0;
     const visibleLetters = letters.slice(0, index);
-    element.innerText = visibleLetters;
+    console.log(`typing letter ${index}`);
+    element.textContent = visibleLetters;
     if (! element.className.includes('ai-text--active')) {
       element.className = element.className + ' ai-text--active';
     }
@@ -185,6 +186,7 @@ function typeLetters(element, letters, index, resolver) {
 
 function getShowAiTextNumber(textNumber) {
   return function showAiTextNumber() {
+    console.log(`showing text number ${textNumber}`);
     return new Promise((resolve, reject) => {
       const text = document.querySelector(`.ai-text[data-text-order='${textNumber}']`);
       if (! text) {
@@ -193,9 +195,17 @@ function getShowAiTextNumber(textNumber) {
         return;
       }
       setTimeout(() => {
-        typeLetters(text, text.innerText)
+        typeLetters(text, text.textContent.trim())
           .then(resolve)
       }, 300);
+    });
+  }
+}
+
+function getDelayedFunction(timeoutMs, callback) {
+  return () => {
+    return new Promise((resolve) => {
+      setTimeout(() => callback().then(resolve), timeoutMs);
     });
   }
 }
@@ -206,12 +216,11 @@ function showAiTextArea() {
     return;
   }
   text.className = text.className + ' display-panel__text--active';
-  setTimeout( () => {
-    getShowAiTextNumber(2)()
+  getDelayedFunction(1500, getShowAiTextNumber(2))()
     .then(getShowAiTextNumber(3))
     .then(getShowAiTextNumber(4))
-    .then(getShowAiTextNumber(5))
-  }, 1500 );
+    .then(getDelayedFunction(900, getShowAiTextNumber(5)))
+    .then(() => console.log('done'))
 }
 
 function showScreen() {
