@@ -226,7 +226,7 @@ div {
 
 function typeLetters(element, letters, index, resolver) {
   return new Promise((resolve) => {
-    const typingDelay = 100;
+    const typingDelay = 50;
     index = index || 0;
     const visibleLetters = letters.slice(0, index);
     console.log(`typing letter ${index}`);
