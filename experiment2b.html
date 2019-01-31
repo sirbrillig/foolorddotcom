@@ -1,120 +1,120 @@
 <!doctype html>
 <html amp lang="en">
-  <head>
-    <meta charset="utf-8">
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <title>foolord.com</title>
-    <meta name="description" content="Payton Swick. Web developer. Vegan. Tea explorer. Writes code at Automattic.">
-    <link rel="canonical" href="http://foolord.com" />
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <style amp-custom>
+	<head>
+		<meta charset="utf-8">
+		<script async src="https://cdn.ampproject.org/v0.js"></script>
+		<title>foolord.com</title>
+		<meta name="description" content="Payton Swick. Web developer. Vegan. Tea explorer. Writes code at Automattic.">
+		<link rel="canonical" href="http://foolord.com" />
+		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+		<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+		<style amp-custom>
 body {
-  margin: 0;
-  background-color: #424242;
+	margin: 0;
+	background-color: #424242;
 }
 
 div {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .display-panel {
-  height: 100vh;
-  background: grey;
-  display: flex;
-  padding: 1em;
+	height: 100vh;
+	background: grey;
+	display: flex;
+	padding: 1em;
 }
 
 .display-panel__screen {
-  flex: 1;
-  background: linear-gradient(#000000 0%, #00ff89 180%);
-  box-shadow: 0px 0px 30px #baff00;
-  color: #fff;
-  font-family: monospace;
-  font-size: 1.2em;
-  padding: 0.5em;
-  position: relative;
-  top: -100vh;
-  transition: top 1.5s cubic-bezier(0.01, 0.22, 0.80, 1.11);
-  display: flex;
-  flex-wrap: wrap-reverse;
-  align-items: flex-end;
+	flex: 1;
+	background: linear-gradient(#000000 0%, #00ff89 180%);
+	box-shadow: 0px 0px 30px #baff00;
+	color: #fff;
+	font-family: monospace;
+	font-size: 1.2em;
+	padding: 0.5em;
+	position: relative;
+	top: -100vh;
+	transition: top 1.5s cubic-bezier(0.01, 0.22, 0.80, 1.11);
+	display: flex;
+	flex-wrap: wrap-reverse;
+	align-items: flex-end;
 }
 
 .display-panel__text {
-  opacity: 0;
-  padding-right: 1em;
-  flex: 1;
-  height: 200px;
+	opacity: 0;
+	padding-right: 1em;
+	flex: 1;
+	height: 200px;
 }
 
 .display-panel__image {
-  flex-basis: 1100px;
+	flex-basis: 1100px;
 }
 
 @media (min-width: 1100px) {
-  .display-panel {
-    padding: 2em;
-  }
+	.display-panel {
+		padding: 2em;
+	}
 
-  .display-panel__screen {
-    padding: 2em;
-    font-size: 2.5em;
-  }
+	.display-panel__screen {
+		padding: 2em;
+		font-size: 2.5em;
+	}
 
-  .display-panel__image {
-    flex-basis: auto;
-  }
+	.display-panel__image {
+		flex-basis: auto;
+	}
 }
 
 .ai-button {
-  opacity: 0;
-  transition: opacity 1.5s cubic-bezier(0.01, 0.22, 0.80, 1.11);
+	opacity: 0;
+	transition: opacity 1.5s cubic-bezier(0.01, 0.22, 0.80, 1.11);
 }
 
 .ai-button a:visited,
 .ai-button a {
-  color: #fff;
+	color: #fff;
 }
 
 .ai-button--active {
-  opacity: 1;
+	opacity: 1;
 }
 
 .ai-image {
-  opacity: 0;
-  transition: opacity 1.5s cubic-bezier(0.01, 0.22, 0.80, 1.11);
-  text-align: center;
-  margin-top: 1em;
+	opacity: 0;
+	transition: opacity 1.5s cubic-bezier(0.01, 0.22, 0.80, 1.11);
+	text-align: center;
+	margin-top: 1em;
 }
 
 .ai-image img {
-  border: 4px solid black;
-  box-sizing: content-box;
+	border: 4px solid black;
+	box-sizing: content-box;
 }
 
 .ai-image--active {
-  opacity: 1;
+	opacity: 1;
 }
 
 .display-panel__text--active {
-  animation: flicker-in-2 2s linear both;
+	animation: flicker-in-2 2s linear both;
 }
 
 .initial-ai-text {
-  text-shadow: 0px 0px 5px #8cb325;
-  margin-bottom: 0.5em;
+	text-shadow: 0px 0px 5px #8cb325;
+	margin-bottom: 0.5em;
 }
 
 .ai-text {
-  text-shadow: 0px 0px 5px #8cb325;
-  max-width: 0;
-  overflow: hidden;
-  margin-bottom: 0.5em;
+	text-shadow: 0px 0px 5px #8cb325;
+	max-width: 0;
+	overflow: hidden;
+	margin-bottom: 0.5em;
 }
 
 .ai-text--active {
-  max-width: 100%;
+	max-width: 100%;
 }
 
 /* ----------------------------------------------
@@ -127,245 +127,244 @@ div {
  * ----------------------------------------
  */
 @keyframes flicker-in-2 {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 0;
-  }
-  10.1% {
-    opacity: 1;
-  }
-  10.2% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0;
-  }
-  20.1% {
-    opacity: 1;
-  }
-  20.6% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 0;
-  }
-  30.1% {
-    opacity: 1;
-  }
-  30.5% {
-    opacity: 1;
-  }
-  30.6% {
-    opacity: 0;
-  }
-  45% {
-    opacity: 0;
-  }
-  45.1% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  55% {
-    opacity: 1;
-  }
-  55.1% {
-    opacity: 0;
-  }
-  57% {
-    opacity: 0;
-  }
-  57.1% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 1;
-  }
-  60.1% {
-    opacity: 0;
-  }
-  65% {
-    opacity: 0;
-  }
-  65.1% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 1;
-  }
-  75.1% {
-    opacity: 0;
-  }
-  77% {
-    opacity: 0;
-  }
-  77.1% {
-    opacity: 1;
-  }
-  85% {
-    opacity: 1;
-  }
-  85.1% {
-    opacity: 0;
-  }
-  86% {
-    opacity: 0;
-  }
-  86.1% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
+	0% {
+		opacity: 0;
+	}
+	10% {
+		opacity: 0;
+	}
+	10.1% {
+		opacity: 1;
+	}
+	10.2% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 0;
+	}
+	20.1% {
+		opacity: 1;
+	}
+	20.6% {
+		opacity: 0;
+	}
+	30% {
+		opacity: 0;
+	}
+	30.1% {
+		opacity: 1;
+	}
+	30.5% {
+		opacity: 1;
+	}
+	30.6% {
+		opacity: 0;
+	}
+	45% {
+		opacity: 0;
+	}
+	45.1% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 1;
+	}
+	55% {
+		opacity: 1;
+	}
+	55.1% {
+		opacity: 0;
+	}
+	57% {
+		opacity: 0;
+	}
+	57.1% {
+		opacity: 1;
+	}
+	60% {
+		opacity: 1;
+	}
+	60.1% {
+		opacity: 0;
+	}
+	65% {
+		opacity: 0;
+	}
+	65.1% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 1;
+	}
+	75.1% {
+		opacity: 0;
+	}
+	77% {
+		opacity: 0;
+	}
+	77.1% {
+		opacity: 1;
+	}
+	85% {
+		opacity: 1;
+	}
+	85.1% {
+		opacity: 0;
+	}
+	86% {
+		opacity: 0;
+	}
+	86.1% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
 }
-    </style>
-    <script language="javascript">
+		</style>
+		<script language="javascript">
 
 function typeLetters(element, letters, index, resolver) {
-  return new Promise((resolve) => {
-    const typingDelay = 50;
-    index = index || 0;
-    const visibleLetters = letters.slice(0, index);
-    console.log(`typing letter ${index}`);
-    element.textContent = visibleLetters;
-    if (! element.className.includes('ai-text--active')) {
-      element.className = element.className + ' ai-text--active';
-    }
-    if (visibleLetters.length >= letters.length) {
-      return resolver ? resolver() : resolve();
-    }
-    setTimeout(() => typeLetters(element, letters, index + 1, resolver || resolve), typingDelay);
-  });
+	return new Promise((resolve) => {
+		const typingDelay = 50;
+		index = index || 0;
+		const visibleLetters = letters.slice(0, index);
+		console.log(`typing letter ${index}`);
+		element.textContent = visibleLetters;
+		if (! element.className.includes('ai-text--active')) {
+			element.className = element.className + ' ai-text--active';
+		}
+		if (visibleLetters.length >= letters.length) {
+			return resolver ? resolver() : resolve();
+		}
+		setTimeout(() => typeLetters(element, letters, index + 1, resolver || resolve), typingDelay);
+	});
 }
 
 function getShowAiButtonNumber(textNumber) {
-  return function showAiImage() {
-    console.log(`showing button number ${textNumber}`);
-    return new Promise((resolve, reject) => {
-      const image = document.querySelector(`.ai-button[data-text-order='${textNumber}']`);
-      if (! image) {
-        console.error(`could not find AI button number ${textNumber}`);
-        reject();
-        return;
-      }
-      setTimeout(() => {
-        image.className += ' ai-button--active';
-        return resolve();
-      }, 300);
-    });
-  }
+	return function showAiImage() {
+		console.log(`showing button number ${textNumber}`);
+		return new Promise((resolve, reject) => {
+			const image = document.querySelector(`.ai-button[data-text-order='${textNumber}']`);
+			if (! image) {
+				console.error(`could not find AI button number ${textNumber}`);
+				reject();
+				return;
+			}
+			setTimeout(() => {
+				image.className += ' ai-button--active';
+				return resolve();
+			}, 300);
+		});
+	}
 }
 
 function getShowImageNumber(textNumber) {
-  return function showAiImage() {
-    console.log(`showing image number ${textNumber}`);
-    return new Promise((resolve, reject) => {
-      const image = document.querySelector(`.ai-image[data-text-order='${textNumber}']`);
-      if (! image) {
-        console.error(`could not find AI image number ${textNumber}`);
-        reject();
-        return;
-      }
-      setTimeout(() => {
-        image.className += ' ai-image--active';
-        return resolve();
-      }, 300);
-    });
-  }
+	return function showAiImage() {
+		console.log(`showing image number ${textNumber}`);
+		return new Promise((resolve, reject) => {
+			const image = document.querySelector(`.ai-image[data-text-order='${textNumber}']`);
+			if (! image) {
+				console.error(`could not find AI image number ${textNumber}`);
+				reject();
+				return;
+			}
+			setTimeout(() => {
+				image.className += ' ai-image--active';
+				return resolve();
+			}, 300);
+		});
+	}
 }
 
 function getShowAiTextNumber(textNumber) {
-  return function showAiText() {
-    console.log(`showing text number ${textNumber}`);
-    return new Promise((resolve, reject) => {
-      const text = document.querySelector(`.ai-text[data-text-order='${textNumber}']`);
-      if (! text) {
-        console.error(`could not find AI text area number ${textNumber}`);
-        reject();
-        return;
-      }
-      setTimeout(() => {
-        typeLetters(text, text.textContent.trim())
-          .then(resolve)
-      }, 300);
-    });
-  }
+	return function showAiText() {
+		console.log(`showing text number ${textNumber}`);
+		return new Promise((resolve, reject) => {
+			const text = document.querySelector(`.ai-text[data-text-order='${textNumber}']`);
+			if (! text) {
+				console.error(`could not find AI text area number ${textNumber}`);
+				reject();
+				return;
+			}
+			setTimeout(() => {
+				typeLetters(text, text.textContent.trim())
+					.then(resolve)
+			}, 300);
+		});
+	}
 }
 
 function getDelayedFunction(timeoutMs, callback) {
-  return () => {
-    return new Promise((resolve) => {
-      setTimeout(() => callback().then(resolve), timeoutMs);
-    });
-  }
+	return () => {
+		return new Promise((resolve) => {
+			setTimeout(() => callback().then(resolve), timeoutMs);
+		});
+	}
 }
 
 function showAiTextArea() {
-  const text = document.querySelector('.display-panel__text');
-  if (! text) {
-    return;
-  }
-  text.className = text.className + ' display-panel__text--active';
-  getDelayedFunction(1500, getShowImageNumber(2))()
-    .then(getShowAiTextNumber(2))
-    .then(getShowAiTextNumber(3))
-    .then(getShowAiTextNumber(4))
-    .then(getDelayedFunction(900, getShowAiTextNumber(5)))
-    .then(getDelayedFunction(900, getShowAiButtonNumber(5)))
-    .then(() => console.log('done'))
+	const text = document.querySelector('.display-panel__text');
+	if (! text) {
+		return;
+	}
+	text.className = text.className + ' display-panel__text--active';
+	getDelayedFunction(1500, getShowImageNumber(2))()
+		.then(getShowAiTextNumber(2))
+		.then(getShowAiTextNumber(3))
+		.then(getShowAiTextNumber(4))
+		.then(getDelayedFunction(900, getShowAiTextNumber(5)))
+		.then(getDelayedFunction(900, getShowAiButtonNumber(5)))
+		.then(() => console.log('done'))
 }
 
 function showScreen() {
-  const screen = document.querySelector('.display-panel__screen');
-  if (! screen) {
-    return;
-  }
-  screen.style.top = '0px';
-  setTimeout( showAiTextArea, 1200 );
+	const screen = document.querySelector('.display-panel__screen');
+	if (! screen) {
+		return;
+	}
+	screen.style.top = '0px';
+	setTimeout( showAiTextArea, 1200 );
 }
 
 window.onload = function() {
-  showScreen();
+	showScreen();
 }
-    </script>
-  </head>
-  <body>
-    <div role="main" class="main">
-      <div class="display-panel">
-        <div class="display-panel__screen">
-          <div class="display-panel__text">
-            <div class="ai-page" data-page-order="1">
-              <div class="initial-ai-text" data-text-order="1">
-                Hello world.
-              </div>
-              <div class="ai-text" data-text-order="2">
-                This is Payton.
-              </div>
-              <div class="ai-text" data-text-order="3">
-                He makes software that powers the web.
-              </div>
-              <div class="ai-text" data-text-order="4">
-                Sometimes that software can talk.
-              </div>
-              <div class="ai-text" data-text-order="5">
-                Like me.
-              </div>
-              <div class="ai-button" data-text-order="5">
-                <a href="#">Continue →</a>
-              </div>
-            </div>
-          </div>
-          <div class="display-panel__image">
-            <div class="ai-image" data-text-order="2">
-              <img src="images/avatar-chapoquoit-square-small.jpg" srcset="images/avatar-chapoquoit-square.jpg 500w, images/avatar-chapoquoit-square-small.jpg 200w" sizes="(min-width: 1150px) 500px, 200px" alt="Payton" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> <!-- .main -->
-  </body>
+		</script>
+	</head>
+	<body>
+		<div role="main" class="main">
+			<div class="display-panel">
+				<div class="display-panel__screen">
+					<div class="display-panel__text">
+						<div class="ai-page" data-page-order="1">
+							<div class="initial-ai-text" data-text-order="1">
+								Hello world.
+							</div>
+							<div class="ai-text" data-text-order="2">
+								This is Payton.
+							</div>
+							<div class="ai-text" data-text-order="3">
+								He makes software that powers the web.
+							</div>
+							<div class="ai-text" data-text-order="4">
+								Sometimes that software can talk.
+							</div>
+							<div class="ai-text" data-text-order="5">
+								Like me.
+							</div>
+							<div class="ai-button" data-text-order="5">
+								<a href="#">Continue →</a>
+							</div>
+						</div>
+					</div>
+					<div class="display-panel__image">
+						<div class="ai-image" data-text-order="2">
+							<img src="images/avatar-chapoquoit-square-small.jpg" srcset="images/avatar-chapoquoit-square.jpg 500w, images/avatar-chapoquoit-square-small.jpg 200w" sizes="(min-width: 1150px) 500px, 200px" alt="Payton" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> <!-- .main -->
+	</body>
 </html>
-
