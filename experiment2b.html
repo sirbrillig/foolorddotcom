@@ -22,7 +22,7 @@ div {
   height: 100vh;
   background: grey;
   display: flex;
-  padding: 2em;
+  padding: 1em;
 }
 
 .display-panel__screen {
@@ -31,18 +31,40 @@ div {
   box-shadow: 0px 0px 30px #baff00;
   color: #fff;
   font-family: monospace;
-  font-size: 2.5em;
-  padding: 2em;
+  font-size: 1.2em;
+  padding: 0.5em;
   position: relative;
   top: -100vh;
   transition: top 1.5s cubic-bezier(0.01, 0.22, 0.80, 1.11);
   display: flex;
+  flex-wrap: wrap-reverse;
+  align-items: flex-end;
 }
 
 .display-panel__text {
   opacity: 0;
-  padding: 1em;
+  padding-right: 1em;
   flex: 1;
+  height: 200px;
+}
+
+.display-panel__image {
+  flex-basis: 1100px;
+}
+
+@media (min-width: 1100px) {
+  .display-panel {
+    padding: 2em;
+  }
+
+  .display-panel__screen {
+    padding: 2em;
+    font-size: 2.5em;
+  }
+
+  .display-panel__image {
+    flex-basis: auto;
+  }
 }
 
 .ai-button {
@@ -62,6 +84,8 @@ div {
 .ai-image {
   opacity: 0;
   transition: opacity 1.5s cubic-bezier(0.01, 0.22, 0.80, 1.11);
+  text-align: center;
+  margin-top: 1em;
 }
 
 .ai-image img {
@@ -334,7 +358,7 @@ window.onload = function() {
           </div>
           <div class="display-panel__image">
             <div class="ai-image" data-text-order="2">
-              <img src="images/avatar-chapoquoit-square.jpg" />
+              <img src="images/avatar-chapoquoit-square-small.jpg" srcset="images/avatar-chapoquoit-square.jpg 500w, images/avatar-chapoquoit-square-small.jpg 200w" sizes="(min-width: 1150px) 500px, 200px" alt="Payton" />
             </div>
           </div>
         </div>
