@@ -53,9 +53,7 @@ div {
 .ai-text {
   text-shadow: 0px 0px 5px #8cb325;
   max-width: 0;
-  white-space: nowrap;
   overflow: hidden;
-  display: inline-block;
 }
 
 .ai-text--active {
@@ -169,26 +167,37 @@ div {
     </style>
     <script language="javascript">
 
-function typeLetters(element, letters, index) {
-  const typingDelay = 160;
-  index = index || 0;
-  const visibleLetters = letters.slice(0, index);
-  element.innerText = visibleLetters;
-  if (! element.className.includes('ai-text--active')) {
-    element.className = element.className + ' ai-text--active';
-  }
-  if (visibleLetters.length < letters.length) {
-    setTimeout(() => typeLetters(element, letters, index + 1), typingDelay);
-  }
+function typeLetters(element, letters, index, resolver) {
+  return new Promise((resolve) => {
+    const typingDelay = 100;
+    index = index || 0;
+    const visibleLetters = letters.slice(0, index);
+    element.innerText = visibleLetters;
+    if (! element.className.includes('ai-text--active')) {
+      element.className = element.className + ' ai-text--active';
+    }
+    if (visibleLetters.length >= letters.length) {
+      return resolver ? resolver() : resolve();
+    }
+    setTimeout(() => typeLetters(element, letters, index + 1, resolver || resolve), typingDelay);
+  });
 }
 
-function showAiTextNumber(textNumber) {
-  const text = document.querySelector(`.ai-text[data-text-order='${textNumber}']`);
-  if (! text) {
-    console.error(`could not find AI text area number ${textNumber}`);
-    return;
+function getShowAiTextNumber(textNumber) {
+  return function showAiTextNumber() {
+    return new Promise((resolve, reject) => {
+      const text = document.querySelector(`.ai-text[data-text-order='${textNumber}']`);
+      if (! text) {
+        console.error(`could not find AI text area number ${textNumber}`);
+        reject();
+        return;
+      }
+      setTimeout(() => {
+        typeLetters(text, text.innerText)
+          .then(resolve)
+      }, 300);
+    });
   }
-  setTimeout(() => typeLetters(text, text.innerText), 300);
 }
 
 function showAiTextArea() {
@@ -197,7 +206,12 @@ function showAiTextArea() {
     return;
   }
   text.className = text.className + ' display-panel__text--active';
-  setTimeout( () => showAiTextNumber(2), 1500 );
+  setTimeout( () => {
+    getShowAiTextNumber(2)()
+    .then(getShowAiTextNumber(3))
+    .then(getShowAiTextNumber(4))
+    .then(getShowAiTextNumber(5))
+  }, 1500 );
 }
 
 function showScreen() {
@@ -232,7 +246,7 @@ window.onload = function() {
               Sometimes that software talks.
             </div>
             <div class="ai-text" data-text-order="5">
-              Like me. 😁
+              Like me.
             </div>
           </div>
         </div>
