@@ -67,6 +67,14 @@ div {
 	}
 }
 
+.ai-page {
+	display: none;
+}
+
+.ai-page--active {
+	display: block;
+}
+
 .ai-button {
 	opacity: 0;
 	transition: opacity 1.5s cubic-bezier(0.01, 0.22, 0.80, 1.11);
@@ -259,6 +267,21 @@ function getShowAiButtonNumber(textNumber) {
 	}
 }
 
+function getShowPageNumber(pageNumber) {
+	return function showAiPage() {
+		console.log(`showing page number ${pageNumber}`);
+		return new Promise((resolve, reject) => {
+			const page = document.querySelector(`.ai-page[data-page-order='${pageNumber}']`);
+			if (! page ) {
+				console.error(`could not find AI page number ${pageNumber}`);
+				return reject();
+			}
+			page.className += ' ai-page--active';
+			return resolve();
+		});
+	}
+}
+
 function getShowImageNumber(textNumber) {
 	return function showAiImage() {
 		console.log(`showing image number ${textNumber}`);
@@ -309,13 +332,21 @@ function showAiTextArea() {
 		return;
 	}
 	text.className = text.className + ' display-panel__text--active';
-	getDelayedFunction(1500, getShowImageNumber(2))()
-		.then(getShowAiTextNumber(2))
-		.then(getShowAiTextNumber(3))
-		.then(getShowAiTextNumber(4))
-		.then(getDelayedFunction(900, getShowAiTextNumber(5)))
-		.then(getDelayedFunction(900, getShowAiButtonNumber(5)))
-		.then(() => console.log('done'))
+	const urlParams = new URLSearchParams(window.location.search);
+	const pageNumber = parseInt(urlParams.get('page'), 10) || 1;
+	getShowPageNumber(pageNumber)();
+	if (pageNumber === 1) {
+		getDelayedFunction(1500, getShowImageNumber(2))()
+			.then(getShowAiTextNumber(2))
+			.then(getShowAiTextNumber(3))
+			.then(getShowAiTextNumber(4))
+			.then(getDelayedFunction(900, getShowAiTextNumber(5)))
+			.then(getDelayedFunction(900, getShowAiButtonNumber(5)))
+			.then(() => console.log('done'))
+	}
+	if (pageNumber === 2) {
+		getShowAiButtonNumber(6)();
+	}
 }
 
 function showScreen() {
@@ -354,9 +385,14 @@ window.onload = function() {
 								Like me.
 							</div>
 							<div class="ai-button" data-text-order="5">
-								<a href="#">Continue →</a>
+								<a href="?page=2">Continue →</a>
 							</div>
 						</div>
+					</div>
+					<div class="ai-page" data-page-order="2">
+							<div class="ai-button" data-text-order="6">
+								<a href="https://payton.codes/">Payton's Blog</a>
+							</div>
 					</div>
 					<div class="display-panel__image">
 						<div class="ai-image" data-text-order="2">
