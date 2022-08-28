@@ -29,6 +29,17 @@ const codeBlogLinks: InterestLink[] = [
 	},
 ];
 
+const dndDBlogLinks: InterestLink[] = [
+	{
+		name: "An Unfinished War.",
+		url: "https://thesahrencampaign.wordpress.com/",
+	},
+	{
+		name: "Amari's Armada.",
+		url: "https://amarisarmada.wordpress.com/",
+	},
+];
+
 const Home: NextPage = () => {
 	return (
 		<div className={styles.container}>
@@ -44,9 +55,10 @@ const Home: NextPage = () => {
 			<main className={styles.main}>
 				<h1>Payton Swick</h1>
 
-				<div className={styles.interests}>
+				<div className={styles.grid}>
 					<Interest className={styles['interest__code']} title="I love coding." links={codingProjects} />
 					<Interest className={styles['interest__code-blog']} title="I love writing about code." links={codeBlogLinks} />
+					<Interest className={styles['interest__dnd']} title="I love Dungeons and Dragons." links={dndDBlogLinks} />
 				</div>
 			</main>
 		</div>

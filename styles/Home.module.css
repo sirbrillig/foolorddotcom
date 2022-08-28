@@ -1,6 +1,7 @@
 .container {
 	--interest-code-color: #6E85B7;
 	--interest-code-blog-color: #A66CFF;
+	--interest-dnd-blog-color: #AD8B73;
 }
 
 .container {
@@ -73,7 +74,7 @@
 .grid {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: left;
 	flex-wrap: wrap;
 	max-width: 800px;
 }
@@ -105,10 +106,6 @@
 	line-height: 1.5;
 }
 
-.interests {
-	display: flex;
-}
-
 .interest__code {
 	border-color: var(--interest-code-color);
 	background-color: var(--interest-code-color);
@@ -118,6 +115,12 @@
 .interest__code-blog {
 	border-color: var(--interest-code-blog-color);
 	background-color: var(--interest-code-blog-color);
+	color: #fff;
+}
+
+.interest__dnd {
+	border-color: var(--interest-dnd-blog-color);
+	background-color: var(--interest-dnd-blog-color);
 	color: #fff;
 }
 
