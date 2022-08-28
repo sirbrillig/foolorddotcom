@@ -2,6 +2,33 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
+interface InterestLink {
+	name: string;
+	url: string;
+}
+
+const codingProjects: InterestLink[] = [
+	{
+		name: "phpcs-variable-analysis",
+		url: "https://github.com/sirbrillig/phpcs-variable-analysis/",
+	},
+	{
+		name: "phpcs-changed",
+		url: "https://github.com/sirbrillig/phpcs-changed/",
+	},
+];
+
+const codeBlogLinks: InterestLink[] = [
+	{
+		name: "Good coding practices",
+		url: "https://github.com/sirbrillig/phpcs-variable-analysis/",
+	},
+	{
+		name: "Writing a PR description to get better reviews.",
+		url: "https://github.com/sirbrillig/phpcs-changed/",
+	},
+];
+
 const Home: NextPage = () => {
 	return (
 		<div className={styles.container}>
@@ -16,9 +43,30 @@ const Home: NextPage = () => {
 
 			<main className={styles.main}>
 				<h1>Payton Swick</h1>
+
+				<div className={styles.interests}>
+					<Interest title="I love coding." links={codingProjects} />
+					<Interest title="I love writing about code." links={codeBlogLinks} />
+				</div>
 			</main>
 		</div>
 	);
 };
+
+function Interest({ title, links }: { title: string; links: InterestLink[] }) {
+	return (
+		<section className={styles.card}>
+			<h2>{title}</h2>
+
+			<ul>
+				{links.map((link) => (
+					<li key={link.name}>
+						<a href={link.url}>{link.name}</a>
+					</li>
+				))}
+			</ul>
+		</section>
+	);
+}
 
 export default Home;
