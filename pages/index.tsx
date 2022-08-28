@@ -21,11 +21,11 @@ const codingProjects: InterestLink[] = [
 const codeBlogLinks: InterestLink[] = [
 	{
 		name: "Good coding practices",
-		url: "https://github.com/sirbrillig/phpcs-variable-analysis/",
+		url: "https://payton.codes/2022/08/19/good-coding-practices/",
 	},
 	{
 		name: "Writing a PR description to get better reviews.",
-		url: "https://github.com/sirbrillig/phpcs-changed/",
+		url: "https://payton.codes/2022/06/27/writing-a-diff-pr-description-to-get-better-reviews/",
 	},
 ];
 
