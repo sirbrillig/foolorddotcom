@@ -45,17 +45,17 @@ const Home: NextPage = () => {
 				<h1>Payton Swick</h1>
 
 				<div className={styles.interests}>
-					<Interest title="I love coding." links={codingProjects} />
-					<Interest title="I love writing about code." links={codeBlogLinks} />
+					<Interest className={styles['interest__code']} title="I love coding." links={codingProjects} />
+					<Interest className={styles['interest__code-blog']} title="I love writing about code." links={codeBlogLinks} />
 				</div>
 			</main>
 		</div>
 	);
 };
 
-function Interest({ title, links }: { title: string; links: InterestLink[] }) {
+function Interest({ title, links, className }: { title: string; links: InterestLink[], className?: string }) {
 	return (
-		<section className={styles.card}>
+		<section className={`${styles.card} ${className}`}>
 			<h2>{title}</h2>
 
 			<ul>

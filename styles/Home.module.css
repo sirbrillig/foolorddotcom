@@ -1,4 +1,9 @@
 .container {
+	--interest-code-color: #6E85B7;
+	--interest-code-blog-color: #A66CFF;
+}
+
+.container {
 	padding: 0 2rem;
 }
 
@@ -102,6 +107,18 @@
 
 .interests {
 	display: flex;
+}
+
+.interest__code {
+	border-color: var(--interest-code-color);
+	background-color: var(--interest-code-color);
+	color: #fff;
+}
+
+.interest__code-blog {
+	border-color: var(--interest-code-blog-color);
+	background-color: var(--interest-code-blog-color);
+	color: #fff;
 }
 
 .logo {
