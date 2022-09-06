@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 interface InterestLink {
@@ -43,30 +44,59 @@ const dndDBlogLinks: InterestLink[] = [
 const Home: NextPage = () => {
 	return (
 		<div className={styles.container}>
-			<Head>
-				<title>Payton Swick</title>
-				<meta
-					name="description"
-					content="Payton Swick: Web developer, vegan, tea explorer. Writes code at Automattic."
-				/>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
+			<div className={styles["bottom-clouds"]}>
+				<div className={styles.mountains}>
+					<div className={styles["top-clouds"]}>
+						<Head>
+							<title>Payton Swick</title>
+							<meta
+								name="description"
+								content="Payton Swick: Web developer, vegan, tea explorer. Writes code at Automattic."
+							/>
+							<link rel="icon" href="/favicon.ico" />
+						</Head>
 
-			<main className={styles.main}>
-				<h1 className={styles.title}>Payton Swick</h1>
-				<div className={styles.subtitle}>Vegan. Digital craftsman. Tea explorer. Avid learner of things. Writes code @Automattic.</div>
+						<main className={styles.main}>
+							<h1 className={styles.title}>Payton Swick</h1>
+							<div className={styles.subtitle}>
+								Vegan. Digital craftsman. Tea explorer. Avid learner of things.
+								Writes code @Automattic.
+							</div>
 
-				<div className={styles.grid}>
-					<Interest className={styles['interest__code']} title="I love coding." links={codingProjects} />
-					<Interest className={styles['interest__code-blog']} title="I love writing about code." links={codeBlogLinks} />
-					<Interest className={styles['interest__dnd']} title="I love Dungeons and Dragons." links={dndDBlogLinks} />
+							<div className={styles.grid}>
+								<Interest
+									className={styles["interest__code"]}
+									title="I love coding."
+									links={codingProjects}
+								/>
+								<Interest
+									className={styles["interest__code-blog"]}
+									title="I love writing about code."
+									links={codeBlogLinks}
+								/>
+								<Interest
+									className={styles["interest__dnd"]}
+									title="I love Dungeons and Dragons."
+									links={dndDBlogLinks}
+								/>
+							</div>
+						</main>
+					</div>
 				</div>
-			</main>
+			</div>
 		</div>
 	);
 };
 
-function Interest({ title, links, className }: { title: string; links: InterestLink[], className?: string }) {
+function Interest({
+	title,
+	links,
+	className,
+}: {
+	title: string;
+	links: InterestLink[];
+	className?: string;
+}) {
 	return (
 		<section className={`${styles.card} ${className}`}>
 			<h2>{title}</h2>

@@ -15,9 +15,26 @@
 }
 
 .container {
-	padding: 0 2rem;
 	background-color: var(--background-color);
 	color: var(--control-text);
+}
+
+.mountains {
+	background-image: url('/Mountains.svg');
+	background-repeat: no-repeat;
+	background-position-y: 52%;
+}
+
+.bottom-clouds {
+	background-image: url('/Bottom_Clouds.svg');
+	background-repeat: no-repeat;
+	background-position-y: 120%;
+}
+
+.top-clouds {
+	background-image: url('/Top_Clouds.svg');
+	background-repeat: no-repeat;
+	background-position-y: 2%;
 }
 
 .main {
