@@ -2,10 +2,22 @@
 	--interest-code-color: #6E85B7;
 	--interest-code-blog-color: #A66CFF;
 	--interest-dnd-blog-color: #AD8B73;
+	--background-color: #E3E2E2;
+	--cloud-color: #FFFFFF;
+	--mountain-color: #EE964B;
+	--control-background: #3E3E3E;
+	--control-highlight: #0698B5;
+	--control-text: #F1F1F1;
+	--title-text: #3E3E3E;
+	--title-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	--title-font: 'Noto Serif', serif;
+	--body-font: 'Noto Sans', sans-serif;
 }
 
 .container {
 	padding: 0 2rem;
+	background-color: var(--background-color);
+	color: var(--control-text);
 }
 
 .main {
@@ -18,57 +30,25 @@
 	align-items: center;
 }
 
-.footer {
-	display: flex;
-	flex: 1;
-	padding: 2rem 0;
-	border-top: 1px solid #eaeaea;
-	justify-content: center;
-	align-items: center;
-}
-
-.footer a {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-grow: 1;
-}
-
-.title a {
-	color: #0070f3;
-	text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-	text-decoration: underline;
-}
-
 .title {
+	color: var(--title-text);
+	text-shadow: var(--title-shadow);
+	font-family: var(--title-font);
+	font-style: normal;
+	font-weight: 400;
+	font-size: 4em;
+	line-height: 1.2em;
 	margin: 0;
-	line-height: 1.15;
-	font-size: 4rem;
 }
 
-.title,
-.description {
-	text-align: center;
-}
-
-.description {
-	margin: 4rem 0;
-	line-height: 1.5;
-	font-size: 1.5rem;
-}
-
-.code {
-	background: #fafafa;
-	border-radius: 5px;
-	padding: 0.75rem;
-	font-size: 1.1rem;
-	font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-		Bitstream Vera Sans Mono, Courier New, monospace;
+.subtitle {
+	color: var(--title-text);
+	text-shadow: var(--title-shadow);
+	font-family: var(--body-font);
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1em;
+	line-height: 27px;
 }
 
 .grid {
@@ -124,11 +104,6 @@
 	color: #fff;
 }
 
-.logo {
-	height: 1em;
-	margin-left: 0.5rem;
-}
-
 @media (max-width: 600px) {
 	.grid {
 		width: 100%;
@@ -137,14 +112,4 @@
 }
 
 @media (prefers-color-scheme: dark) {
-	.card,
-	.footer {
-		border-color: #222;
-	}
-	.code {
-		background: #111;
-	}
-	.logo img {
-		filter: invert(1);
-	}
 }

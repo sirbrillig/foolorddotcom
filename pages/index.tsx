@@ -53,7 +53,8 @@ const Home: NextPage = () => {
 			</Head>
 
 			<main className={styles.main}>
-				<h1>Payton Swick</h1>
+				<h1 className={styles.title}>Payton Swick</h1>
+				<div className={styles.subtitle}>Vegan. Digital craftsman. Tea explorer. Avid learner of things. Writes code @Automattic.</div>
 
 				<div className={styles.grid}>
 					<Interest className={styles['interest__code']} title="I love coding." links={codingProjects} />
