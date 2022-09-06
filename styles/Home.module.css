@@ -70,12 +70,11 @@
 
 .interests {
 	display: grid;
-	grid-template-columns: 273px 273px 273px;
-	grid-template-rows: 300px 300px 300px;
+	grid-template-columns: 273px;
+	grid-template-rows: 300px;
 	grid-template-areas:
-	"segment8 segment1 segment2"
-	"segment7 . segment3"
-	"segment6 segment5 segment4";
+	"segment1"
+	"segment4";
 }
 
 .interests__section {
@@ -86,7 +85,7 @@
 	padding-top: 28%;
 	background-image: url('/Interest_Segment.svg');
 	background-repeat: no-repeat;
-	width: 280px;
+	width: 291px;
 	height: 300px;
 }
 
