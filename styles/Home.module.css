@@ -68,6 +68,58 @@
 	line-height: 27px;
 }
 
+.interests {
+	display: grid;
+	grid-template-columns: 273px 273px 273px;
+	grid-template-rows: 300px 300px 300px;
+	grid-template-areas:
+	"segment8 segment1 segment2"
+	"segment7 . segment3"
+	"segment6 segment5 segment4";
+}
+
+.interests__section {
+	text-align: center;
+	font-size: 2em;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-top: 28%;
+	background-image: url('/Interest_Segment.svg');
+	background-repeat: no-repeat;
+	width: 280px;
+	height: 300px;
+}
+
+.interests__section:nth-child(1) {
+	transform: rotate(0deg);
+	grid-area: segment1;
+}
+
+.interests__section:nth-child(2) {
+	transform: rotate(60deg);
+	grid-area: segment2;
+}
+
+.interests__section:nth-child(3) {
+	transform: rotate(120deg);
+	grid-area: segment3;
+}
+
+.interests__section:nth-child(4) {
+	transform: rotate(180deg);
+	grid-area: segment4;
+}
+
+.interests__section:nth-child(5) {
+	transform: rotate(240deg);
+	grid-area: segment5;
+}
+
+.interests__section:nth-child(6) {
+	transform: rotate(300deg);
+	grid-area: segment6;
+}
+
 .grid {
 	display: flex;
 	align-items: center;

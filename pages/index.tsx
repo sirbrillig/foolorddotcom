@@ -63,6 +63,27 @@ const Home: NextPage = () => {
 								Writes code @Automattic.
 							</div>
 
+							<div className={styles.interests}>
+								<div className={styles['interests__section']}>
+									About me.
+								</div>
+								<div className={styles['interests__section']}>
+									I love coding.
+								</div>
+								<div className={styles['interests__section']}>
+									Coding thoughts.
+								</div>
+								<div className={styles['interests__section']}>
+									Tea thoughts.
+								</div>
+								<div className={styles['interests__section']}>
+									D&D Campaigns.
+								</div>
+								<div className={styles['interests__section']}>
+									D&D One-shots.
+								</div>
+							</div>
+
 							<div className={styles.grid}>
 								<Interest
 									className={styles["interest__code"]}
