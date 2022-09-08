@@ -70,8 +70,8 @@
 
 .interests {
 	display: grid;
-	grid-template-columns: 150px 150px 150px 150px 150px 150px;
-	grid-template-rows: 150px 150px 150px 150px 150px 150px;
+	grid-template-columns: repeat(6, 69px);
+	grid-template-rows: repeat(6, 80px);
 	grid-template-areas:
 	". . segment1 segment1 . ."
 	"segment6 segment6 segment1 segment1 segment2 segment2"
@@ -89,8 +89,8 @@
 	padding-top: 28%;
 	background-image: url('/Interest_Segment.svg');
 	background-repeat: no-repeat;
-	width: 291px;
-	height: 300px;
+	width: 304px;
+	height: 304px;
 }
 
 .interests__section:nth-child(1) {
