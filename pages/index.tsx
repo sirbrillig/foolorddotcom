@@ -64,42 +64,12 @@ const Home: NextPage = () => {
 							</div>
 
 							<div className={styles.interests}>
-								<div className={styles['interests__section']}>
-									About me.
-								</div>
-								<div className={styles['interests__section']}>
-									I love coding.
-								</div>
-								<div className={styles['interests__section']}>
-									Coding thoughts.
-								</div>
-								<div className={styles['interests__section']}>
-									Tea thoughts.
-								</div>
-								<div className={styles['interests__section']}>
-									D&D Campaigns.
-								</div>
-								<div className={styles['interests__section']}>
-									D&D One-shots.
-								</div>
-							</div>
-
-							<div className={styles.grid}>
-								<Interest
-									className={styles["interest__code"]}
-									title="I love coding."
-									links={codingProjects}
-								/>
-								<Interest
-									className={styles["interest__code-blog"]}
-									title="I love writing about code."
-									links={codeBlogLinks}
-								/>
-								<Interest
-									className={styles["interest__dnd"]}
-									title="I love Dungeons and Dragons."
-									links={dndDBlogLinks}
-								/>
+								<Interest title="About me." />
+								<Interest title="I love coding." />
+								<Interest title="Coding thoughts." />
+								<Interest title="Tea thoughts." />
+								<Interest title="D&D Campaigns." />
+								<Interest title="D&D One-shots." />
 							</div>
 						</main>
 					</div>
@@ -109,28 +79,8 @@ const Home: NextPage = () => {
 	);
 };
 
-function Interest({
-	title,
-	links,
-	className,
-}: {
-	title: string;
-	links: InterestLink[];
-	className?: string;
-}) {
-	return (
-		<section className={`${styles.card} ${className}`}>
-			<h2>{title}</h2>
-
-			<ul>
-				{links.map((link) => (
-					<li key={link.name}>
-						<a href={link.url}>{link.name}</a>
-					</li>
-				))}
-			</ul>
-		</section>
-	);
+function Interest({ title }: { title: string }) {
+	return <div className={styles["interests__section"]}>{title}</div>;
 }
 
 export default Home;
