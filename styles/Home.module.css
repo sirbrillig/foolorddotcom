@@ -173,8 +173,10 @@
 
 .interests {
 	display: grid;
-	grid-template-columns: repeat(6, 38px);
-	grid-template-rows: repeat(6, 44px);
+	max-height: 400px;
+	margin-left: -32px;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 	grid-template-areas:
 	". . segment1 segment1 . ."
 	"segment6 segment6 segment1 segment1 segment2 segment2"
@@ -189,11 +191,26 @@
 	display: flex;
 	justify-content: center;
 	font-size: 1.3em;
-	padding: 1em 1.4em;
+	padding: 3em 4em;
+	margin-right: -1.5em;
+	width: 240px;
+	height: 152px;
+	max-width: calc(400px/6);
+}
+
+.interests__section span {
+	padding-top: 1em;
+}
+
+.interests__section::after {
+	content: " ";
+	position: absolute;
+	z-index: -1;
 	background-image: url('/Interest_Segment.svg');
-	background-size: 103%;
 	background-repeat: no-repeat;
-	width: 150px;
+	background-position-x: center;
+	background-size: 65%;
+	width: 240px;
 	height: 150px;
 }
 

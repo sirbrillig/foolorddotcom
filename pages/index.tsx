@@ -93,7 +93,7 @@ const Home: NextPage = () => {
 };
 
 function Interest({ title }: { title: string }) {
-	return <div className={styles["interests__section"]}>{title}</div>;
+	return <div className={styles["interests__section"]}><span>{title}</span></div>;
 }
 
 export default Home;
