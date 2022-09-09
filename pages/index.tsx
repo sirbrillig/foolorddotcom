@@ -48,16 +48,18 @@ const Home: NextPage = () => {
 
 			<div className={styles.mountains}></div>
 
-			<div className={styles.cloud} />
-			<div className={styles.cloud} />
-			<div className={styles.cloud} />
-			<div className={styles.cloud} />
-			<div className={styles.cloud} />
-			<div className={styles.cloud} />
-			<div className={styles.cloud} />
-			<div className={styles.cloud} />
-			<div className={styles.cloud} />
-			<div className={styles.cloud} />
+			<div className={styles.clouds}>
+				<div className={styles.cloud} />
+				<div className={styles.cloud} />
+				<div className={styles.cloud} />
+				<div className={styles.cloud} />
+				<div className={styles.cloud} />
+				<div className={styles.cloud} />
+				<div className={styles.cloud} />
+				<div className={styles.cloud} />
+				<div className={styles.cloud} />
+				<div className={styles.cloud} />
+			</div>
 
 			<Head>
 				<title>Payton Swick</title>
