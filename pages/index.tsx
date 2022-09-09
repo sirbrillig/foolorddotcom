@@ -44,47 +44,48 @@ const dndDBlogLinks: InterestLink[] = [
 const Home: NextPage = () => {
 	return (
 		<div className={styles.container}>
-			<div className={styles["bottom-clouds"]}>
-				<div className={styles.mountains}>
-					<div className={styles["top-clouds"]}>
-						<Head>
-							<title>Payton Swick</title>
-							<meta
-								name="description"
-								content="Payton Swick: Web developer, vegan, tea explorer. Writes code at Automattic."
-							/>
-							<link rel="icon" href="/favicon.ico" />
-						</Head>
-						<div className={styles.cloud} />
-						<div className={styles.cloud} />
-						<div className={styles.cloud} />
-						<div className={styles.cloud} />
-						<div className={styles.cloud} />
-						<div className={styles.cloud} />
-						<div className={styles.cloud} />
-						<div className={styles.cloud} />
-						<div className={styles.cloud} />
-						<div className={styles.cloud} />
+			<div className={styles["bottom-clouds"]}></div>
 
-						<main className={styles.main}>
-							<h1 className={styles.title}>Payton Swick</h1>
-							<div className={styles.subtitle}>
-								Vegan. Digital craftsman. Tea explorer. Avid learner of things.
-								Writes code @Automattic.
-							</div>
+			<div className={styles.mountains}></div>
 
-							<div className={styles.interests}>
-								<Interest title="About me." />
-								<Interest title="I love coding." />
-								<Interest title="Coding thoughts." />
-								<Interest title="Tea thoughts." />
-								<Interest title="D&D Camp&shy;aigns." />
-								<Interest title="D&D One-shots." />
-							</div>
-						</main>
-					</div>
+			<div className={styles.cloud} />
+			<div className={styles.cloud} />
+			<div className={styles.cloud} />
+			<div className={styles.cloud} />
+			<div className={styles.cloud} />
+			<div className={styles.cloud} />
+			<div className={styles.cloud} />
+			<div className={styles.cloud} />
+			<div className={styles.cloud} />
+			<div className={styles.cloud} />
+
+			<Head>
+				<title>Payton Swick</title>
+				<meta
+					name="description"
+					content="Payton Swick: Web developer, vegan, tea explorer. Writes code at Automattic."
+				/>
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
+
+			<main className={styles.main}>
+				<h1 className={styles.title}>Payton Swick</h1>
+				<div className={styles.subtitle}>
+					Vegan. Digital craftsman. Tea explorer. Avid learner of things. Writes
+					code @Automattic.
 				</div>
-			</div>
+
+				<section className={styles.body}>
+					<div className={styles.interests}>
+						<Interest title="About me." />
+						<Interest title="I love coding." />
+						<Interest title="Coding thoughts." />
+						<Interest title="Tea thoughts." />
+						<Interest title="D&D Camp&shy;aigns." />
+						<Interest title="D&D One-shots." />
+					</div>
+				</section>
+			</main>
 		</div>
 	);
 };
