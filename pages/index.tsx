@@ -55,6 +55,16 @@ const Home: NextPage = () => {
 							/>
 							<link rel="icon" href="/favicon.ico" />
 						</Head>
+						<div className={styles.cloud} />
+						<div className={styles.cloud} />
+						<div className={styles.cloud} />
+						<div className={styles.cloud} />
+						<div className={styles.cloud} />
+						<div className={styles.cloud} />
+						<div className={styles.cloud} />
+						<div className={styles.cloud} />
+						<div className={styles.cloud} />
+						<div className={styles.cloud} />
 
 						<main className={styles.main}>
 							<h1 className={styles.title}>Payton Swick</h1>
