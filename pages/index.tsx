@@ -68,7 +68,7 @@ const Home: NextPage = () => {
 								<Interest title="I love coding." />
 								<Interest title="Coding thoughts." />
 								<Interest title="Tea thoughts." />
-								<Interest title="D&D Campaigns." />
+								<Interest title="D&D Camp&shy;aigns." />
 								<Interest title="D&D One-shots." />
 							</div>
 						</main>
