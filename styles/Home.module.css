@@ -198,6 +198,14 @@
 	max-width: calc(400px/6);
 }
 
+.interests__section:hover {
+	background-color: var(--control-highlight);
+	mask: url(/Interest_Segment.svg);
+	mask-repeat: no-repeat;
+	mask-position: center;
+	mask-size: 65%;
+}
+
 .interests__section span {
 	padding-top: 1em;
 }
@@ -206,7 +214,7 @@
 	content: " ";
 	position: absolute;
 	z-index: -1;
-	background-image: url('/Interest_Segment.svg');
+	background-image: url(/Interest_Segment.svg);
 	background-repeat: no-repeat;
 	background-position-x: center;
 	background-size: 65%;
