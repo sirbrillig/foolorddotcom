@@ -171,7 +171,49 @@
 	line-height: 27px;
 }
 
-.interests {
+@keyframes rotateInterests1 {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(60deg);
+	}
+}
+
+@keyframes rotateInterests2 {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(calc(60deg * 2));
+	}
+}
+
+@keyframes rotateInterests3 {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(calc(60deg * 3));
+	}
+}
+
+@keyframes rotateInterests4 {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(calc(60deg * 4));
+	}
+}
+
+@keyframes rotateInterests5 {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(calc(60deg * 5));
+	}
 }
 
 .interests__section {
@@ -189,6 +231,10 @@
 	background-position-x: center;
 	background-size: 90%;
 	max-width: calc(400px/6);
+	animation-duration: 2s;
+	animation-delay: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
 }
 
 .interests__section:nth-child(1) {
@@ -196,23 +242,23 @@
 }
 
 .interests__section:nth-child(2) {
-	transform: rotate(60deg);
+	animation-name: rotateInterests1;
 }
 
 .interests__section:nth-child(3) {
-	transform: rotate(120deg);
+	animation-name: rotateInterests2;
 }
 
 .interests__section:nth-child(4) {
-	transform: rotate(180deg);
+	animation-name: rotateInterests3;
 }
 
 .interests__section:nth-child(5) {
-	transform: rotate(240deg);
+	animation-name: rotateInterests4;
 }
 
 .interests__section:nth-child(6) {
-	transform: rotate(300deg);
+	animation-name: rotateInterests5;
 }
 
 .card {
