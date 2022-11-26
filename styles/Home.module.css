@@ -98,9 +98,9 @@
 }
 .clouds > div:nth-child(5) {
 	left: calc(var(--cloud-width) * 4 + var(--cloud-width-min-padding) + 90px);
-	top: calc(var(--cloud-top-margin) + 135px);
+	top: calc(var(--cloud-top-margin) + 125px);
 	animation-delay: 1.9s;
-	transform: rotate(5deg);
+	transform: rotate(-205deg);
 }
 .clouds > div:nth-child(6) {
 	left: calc(var(--cloud-width) * 5 + var(--cloud-width-min-padding) + 135px);
@@ -115,19 +115,19 @@
 	transform: rotate(18deg);
 }
 .clouds > div:nth-child(8) {
-	left: calc(var(--cloud-width) * 7 + var(--cloud-width-min-padding) + 175px);
+	left: calc(var(--cloud-width) * 7 + var(--cloud-width-min-padding) + 185px);
 	top: calc(var(--cloud-top-margin) + 69px);
 	animation-delay: 1.6s;
-	transform: rotate(-105deg);
+	transform: rotate(-30deg);
 }
 .clouds > div:nth-child(9) {
-	left: calc(var(--cloud-width) * 8 + var(--cloud-width-min-padding) + 205px);
+	left: calc(var(--cloud-width) * 8 + var(--cloud-width-min-padding) + 235px);
 	top: calc(var(--cloud-top-margin) + 35px);
 	animation-delay: 1s;
 	transform: rotate(5deg);
 }
 .clouds > div:nth-child(10) {
-	left: calc(var(--cloud-width) * 9 + var(--cloud-width-min-padding) + 175px);
+	left: calc(var(--cloud-width) * 9 + var(--cloud-width-min-padding) + 355px);
 	top: calc(var(--cloud-top-margin) + 9px);
 	animation-delay: 2.6s;
 	transform: rotate(-15deg);
