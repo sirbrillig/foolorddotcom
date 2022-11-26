@@ -215,6 +215,11 @@
 	}
 }
 
+.interests {
+	position: relative;
+	width: calc(calc(400px/6) * 2.5);
+}
+
 .interests__section {
 	position: absolute;
 	transform-origin: bottom center;
