@@ -221,6 +221,7 @@
 .interests {
 	position: relative;
 	width: calc(calc(400px/6) * 2.5);
+	flex: 0.5;
 }
 
 .interests__section {
