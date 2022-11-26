@@ -36,8 +36,8 @@
 .bottom-clouds {
 	background-color: var(--cloud-color);
 	width: 100%;
-	height: calc(var(--mountain-height) - 5em);
-	bottom: 0;
+	height: 50%;
+	top: 50%;
 	position: fixed;
 }
 
