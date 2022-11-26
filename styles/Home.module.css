@@ -28,16 +28,15 @@
 	background-image: url('/Mountains.svg');
 	background-repeat: repeat-x;
 	width: 100%;
-	height: 50%;
-	bottom: calc(var(--mountain-height) - 15em);
+	height: var(--mountain-height);
 	position: fixed;
 }
 
 .bottom-clouds {
 	background-color: var(--cloud-color);
 	width: 100%;
-	height: 50%;
-	top: 50%;
+	height: var(--mountain-height);
+	top: calc(var(--mountain-height) - calc(var(--mountain-height) / 2));
 	position: fixed;
 }
 
