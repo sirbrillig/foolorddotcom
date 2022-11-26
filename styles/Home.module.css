@@ -14,9 +14,10 @@
 	--body-font: 'Noto Sans', sans-serif;
 	--cloud-width: 195px;
 	--cloud-width-min-padding: 5px;
-	--cloud-top-margin: 7em;
+	--cloud-top-margin: 12em;
 	--cloud-drift-distance: 40px;
 	--mountain-height: 500px;
+	--mountain-top-margin: 14em;
 }
 
 .container {
@@ -29,6 +30,7 @@
 	background-repeat: repeat-x;
 	width: 100%;
 	height: var(--mountain-height);
+	transform: translateY(var(--mountain-top-margin));
 	position: fixed;
 }
 
@@ -37,6 +39,7 @@
 	width: 100%;
 	height: calc(var(--mountain-height) * 2);
 	top: calc(var(--mountain-height) - calc(var(--mountain-height) / 2));
+	transform: translateY(calc(var(--mountain-top-margin) + 20px));
 	position: fixed;
 }
 
