@@ -32,7 +32,9 @@ body {
 
 .terminal-text-overlay svg {
 	fill: var(--terminal-background, #000);
+	height: 1.4rem;
 }
+
 @keyframes terminalWriteEffect {
 	0% {
 		transform-origin: right;

@@ -34,11 +34,12 @@
 	}
 
 	function startTerminal() {
+		const delayBetweenLinesMs = 200;
 		const containers = getTerminalTextContainers();
 		let delay = 0;
 		containers.forEach((container) => {
 			animateTerminalContainer(container, delay);
-			delay += 200;
+			delay += delayBetweenLinesMs;
 		});
 	}
 
