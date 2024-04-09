@@ -13,16 +13,24 @@ body {
 	color: var(--terminal-text, #fff);
 }
 
+.terminal-text-container {
+	position: relative;
+}
+
 .terminal-text {
 	font-size: 1.2rem;
 	min-height: 1.2rem;
 }
 
-.terminal-text-overlay {
+.terminal-text-overlay-container {
 	position: absolute;
+	top: 1px;
+	width: 100%;
+}
+
+.terminal-text-overlay {
 	display: flex;
 	justify-content: flex-end;
-	width: 100%;
 	animation-name: terminalWriteEffect;
 	animation-timing-function: linear;
 	animation-play-state: paused;

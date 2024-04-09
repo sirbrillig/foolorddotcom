@@ -8,13 +8,16 @@
 
 	/**
 	 * @param {HTMLElement} container
+	 * @param {number} overlayCount
 	 * @param {number} delay
 	 * @return {void}
 	 */
-	function animateTerminalContainer(container, delay) {
-		const overlay = container.querySelector(".terminal-text-overlay");
+	function animateTerminalContainer(container, overlayCount, delay) {
+		const overlay = container.querySelector(
+			`.terminal-text-overlay:nth-of-type(${overlayCount})`,
+		);
 		if (!overlay) {
-			console.error("No overlay found");
+			console.error(`No overlay found for count ${overlayCount}`);
 			return;
 		}
 		setTimeout(() => {
@@ -27,8 +30,10 @@
 		const containers = getTerminalTextContainers();
 		let delay = 0;
 		containers.forEach((container) => {
-			animateTerminalContainer(container, delay);
-			delay += delayBetweenLinesMs;
+			[1, 2, 3].forEach((overlayCount) => {
+				animateTerminalContainer(container, overlayCount, delay);
+				delay += delayBetweenLinesMs;
+			});
 		});
 	}
 
