@@ -1,0 +1,46 @@
+:root {
+	--terminal-green: #41FF00;
+}
+
+p {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background: #000;
+	color: var(--terminal-green, #fff);
+}
+
+.terminal-text {
+	font-size: 1.2rem;
+	min-height: 1.2rem;
+	max-height: 1.2rem;
+	overflow: hidden;
+}
+
+.terminal-text-overlay {
+	min-height: 1.2rem;
+	max-height: 1.2rem;
+	overflow: hidden;
+	position: absolute;
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	animation-name: terminalWriteEffect;
+	animation-timing-function: linear;
+	animation-play-state: paused;
+	animation-duration: 0.3s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes terminalWriteEffect {
+	0% {
+		transform-origin: right;
+		transform: scaleX(1.5);
+	}
+	100% {
+		transform-origin: right;
+		transform: scaleX(0);
+	}
+}
