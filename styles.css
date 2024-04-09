@@ -19,37 +19,22 @@ body {
 
 .terminal-text {
 	font-size: 1.2rem;
-	min-height: 1.2rem;
-}
+	color: #0000;
+	background: linear-gradient(var(--terminal-text) 0 0) no-repeat;
+	background-clip: text;
 
-.terminal-text-overlay-container {
-	position: absolute;
-	top: 1px;
-	width: 100%;
-}
-
-.terminal-text-overlay {
-	display: flex;
-	justify-content: flex-end;
 	animation-name: terminalWriteEffect;
-	animation-timing-function: linear;
 	animation-play-state: paused;
+	animation-timing-function: linear;
 	animation-duration: 0.3s;
 	animation-fill-mode: forwards;
 }
 
-.terminal-text-overlay svg {
-	fill: var(--terminal-background, #000);
-	height: 1.4rem;
-}
-
 @keyframes terminalWriteEffect {
 	0% {
-		transform-origin: right;
-		transform: scaleX(1.5);
+		background-size: 0% 100%;
 	}
 	100% {
-		transform-origin: right;
-		transform: scaleX(0);
+		background-size: 100% 100%;
 	}
 }

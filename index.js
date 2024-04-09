@@ -8,20 +8,19 @@
 
 	/**
 	 * @param {HTMLElement} container
-	 * @param {number} overlayCount
 	 * @param {number} delay
 	 * @return {void}
 	 */
-	function animateTerminalContainer(container, overlayCount, delay) {
-		const overlay = container.querySelector(
-			`.terminal-text-overlay:nth-of-type(${overlayCount})`,
+	function animateTerminalContainer(container, delay) {
+		const textArea = container.querySelector(
+			`.terminal-text`
 		);
-		if (!overlay) {
-			console.error(`No overlay found for count ${overlayCount}`);
+		if (!textArea) {
 			return;
 		}
+
 		setTimeout(() => {
-			overlay.style["animation-play-state"] = "running";
+			textArea.style["animation-play-state"] = "running";
 		}, delay);
 	}
 
@@ -30,10 +29,8 @@
 		const containers = getTerminalTextContainers();
 		let delay = 0;
 		containers.forEach((container) => {
-			[1, 2, 3].forEach((overlayCount) => {
-				animateTerminalContainer(container, overlayCount, delay);
-				delay += delayBetweenLinesMs;
-			});
+			animateTerminalContainer(container, delay);
+			delay += delayBetweenLinesMs;
 		});
 	}
 
