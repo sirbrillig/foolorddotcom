@@ -1,5 +1,6 @@
 :root {
-	--terminal-green: #41FF00;
+	--terminal-text: #33FF33;
+	--terminal-background: #282828;
 }
 
 p {
@@ -8,21 +9,16 @@ p {
 }
 
 body {
-	background: #000;
-	color: var(--terminal-green, #fff);
+	background: var(--terminal-background, #000);
+	color: var(--terminal-text, #fff);
 }
 
 .terminal-text {
 	font-size: 1.2rem;
 	min-height: 1.2rem;
-	max-height: 1.2rem;
-	overflow: hidden;
 }
 
 .terminal-text-overlay {
-	min-height: 1.2rem;
-	max-height: 1.2rem;
-	overflow: hidden;
 	position: absolute;
 	display: flex;
 	justify-content: flex-end;
@@ -34,6 +30,9 @@ body {
 	animation-fill-mode: forwards;
 }
 
+.terminal-text-overlay svg {
+	fill: var(--terminal-background, #000);
+}
 @keyframes terminalWriteEffect {
 	0% {
 		transform-origin: right;
