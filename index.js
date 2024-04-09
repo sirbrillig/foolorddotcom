@@ -17,17 +17,6 @@
 			console.error("No overlay found");
 			return;
 		}
-		const overlaySvg = container.querySelector(".terminal-text-overlay svg");
-		if (!overlaySvg) {
-			console.error("No overlay svg found");
-			return;
-		}
-		const textArea = container.querySelector(".terminal-text");
-		if (!textArea) {
-			console.error("No text area found");
-			return;
-		}
-		overlaySvg.setAttribute("width", textArea.getBoundingClientRect().width);
 		setTimeout(() => {
 			overlay.style["animation-play-state"] = "running";
 		}, delay);
