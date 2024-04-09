@@ -2,5 +2,9 @@
   "name": "foolorddotcom",
   "private": true,
   "dependencies": {
+    "prettier": "^3.2.5"
+  }
+  "prettier": {
+  	"useTabs": true,
   }
 }
