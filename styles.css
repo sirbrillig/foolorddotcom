@@ -20,8 +20,11 @@ body {
 .terminal-text {
 	font-size: 1.2rem;
 	color: #0000;
-	background: linear-gradient(var(--terminal-text) 0 0) no-repeat;
+
+	background-image: linear-gradient(var(--terminal-text, #fff) 0 0);
+	background-repeat: no-repeat;
 	background-clip: text;
+	background-size: 0% 100%;
 
 	animation-name: terminalWriteEffect;
 	animation-play-state: paused;
@@ -31,9 +34,6 @@ body {
 }
 
 @keyframes terminalWriteEffect {
-	0% {
-		background-size: 0% 100%;
-	}
 	100% {
 		background-size: 100% 100%;
 	}
