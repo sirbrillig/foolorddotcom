@@ -6,6 +6,13 @@
 body {
 	background: var(--terminal-background, #000);
 	color: var(--terminal-text, #fff);
+	display: flex;
+	justify-content: center;
+	padding: 1rem;
+}
+
+main {
+	max-width: 800px;
 }
 
 .terminal-text-container {
