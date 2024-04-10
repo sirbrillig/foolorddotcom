@@ -35,8 +35,38 @@ main {
 	animation-fill-mode: forwards;
 }
 
+.flicker {
+	animation-name: flickerEffect;
+	animation-duration: 4s;
+	animation-delay: 2s;
+	animation-iteration-count: infinite;
+}
+
 @keyframes terminalWriteEffect {
 	100% {
 		background-size: 100% 100%;
+	}
+}
+
+@keyframes flickerEffect {
+	0% {
+		opacity: 0.2;
+	}
+	7% {
+		opacity: 0.5;
+	}
+	10% {
+		opacity: 0.2;
+	}
+	17% {
+		opacity: 0.8;
+	}
+	30% {
+		opacity: 1;
+		text-shadow: none;
+	}
+	100% {
+		opacity: 1;
+		text-shadow: none;
 	}
 }
