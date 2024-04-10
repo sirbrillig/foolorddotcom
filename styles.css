@@ -63,10 +63,8 @@ main {
 	}
 	30% {
 		opacity: 1;
-		text-shadow: none;
 	}
 	100% {
 		opacity: 1;
-		text-shadow: none;
 	}
 }
