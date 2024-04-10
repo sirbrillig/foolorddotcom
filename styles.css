@@ -3,11 +3,6 @@
 	--terminal-background: #282828;
 }
 
-p {
-	padding: 0;
-	margin: 0;
-}
-
 body {
 	background: var(--terminal-background, #000);
 	color: var(--terminal-text, #fff);
