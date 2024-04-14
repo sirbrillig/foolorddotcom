@@ -3,7 +3,9 @@
 	 * @return {HTMLElement[]}
 	 */
 	function getTerminalTextContainers() {
-		return Array.from(document.querySelectorAll(".terminal-text, .terminal-text-list li"));
+		return Array.from(
+			document.querySelectorAll(".terminal-text, .terminal-text-list li"),
+		);
 	}
 
 	/**
@@ -21,11 +23,33 @@
 	 * @return {void}
 	 */
 	function focusMenuInput() {
-		const input = document.querySelector('#menu-input');
-		if (!input) {
-			return;
+		const input = document.querySelector("#menu-input");
+		input?.focus();
+		const inputForm = document.querySelector("#menu-input-form");
+		inputForm?.addEventListener("submit", handleMenuInput);
+	}
+
+	/**
+	 * @return {void}
+	 */
+	function handleMenuInput(event) {
+		event.preventDefault();
+		const input = document.querySelector("#menu-input");
+		const value = input?.value;
+		switch (value) {
+			case "1":
+				document.location.href = "https://github.com/sirbrillig";
+				return;
+			case "2":
+				document.location.href = "https://payton.codes/tag/coding/";
+				return;
+			case "3":
+				document.location.href = "https://payton.codes/tag/dnd/";
+				return;
+			default:
+				input.value = '';
+				return;
 		}
-		input.focus();
 	}
 
 	function startTerminal() {
