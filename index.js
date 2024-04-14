@@ -36,6 +36,7 @@
 		event.preventDefault();
 		const input = document.querySelector("#menu-input");
 		const value = input?.value;
+		input.value = '';
 		switch (value) {
 			case "1":
 				document.location.href = "https://github.com/sirbrillig";
@@ -45,9 +46,6 @@
 				return;
 			case "3":
 				document.location.href = "https://payton.codes/tag/dnd/";
-				return;
-			default:
-				input.value = '';
 				return;
 		}
 	}
