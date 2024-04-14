@@ -67,3 +67,13 @@ main {
 		opacity: 1;
 	}
 }
+
+#menu-input {
+	background: #0000;
+	border: none;
+	color: var(--terminal-text, #fff);
+}
+
+#menu-input:focus-visible {
+	outline: none;
+}

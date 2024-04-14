@@ -17,6 +17,17 @@
 		}, delay);
 	}
 
+	/**
+	 * @return {void}
+	 */
+	function focusMenuInput() {
+		const input = document.querySelector('#menu-input');
+		if (!input) {
+			return;
+		}
+		input.focus();
+	}
+
 	function startTerminal() {
 		const delayBetweenContainersMs = 400;
 		const containers = getTerminalTextContainers();
@@ -25,6 +36,7 @@
 			animateTerminalContainer(container, delay);
 			delay += delayBetweenContainersMs;
 		});
+		setTimeout(focusMenuInput, delay);
 	}
 
 	document.addEventListener("DOMContentLoaded", startTerminal);
