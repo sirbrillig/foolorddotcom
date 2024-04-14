@@ -1,9 +1,7 @@
-:root {
+body {
 	--terminal-text: #33FF33;
 	--terminal-background: #282828;
-}
 
-body {
 	background: var(--terminal-background, #000);
 	color: var(--terminal-text, #fff);
 	display: flex;
@@ -15,11 +13,7 @@ main {
 	max-width: 800px;
 }
 
-.terminal-text-container {
-	position: relative;
-}
-
-.terminal-text {
+.terminal-text, .terminal-text-list li {
 	font-size: 1.2rem;
 	color: #0000;
 
@@ -35,10 +29,15 @@ main {
 	animation-fill-mode: forwards;
 }
 
+.terminal-text-list {
+	list-style-type: none;
+	padding: 0px;
+}
+
 .flicker {
 	animation-name: flickerEffect;
 	animation-duration: 4s;
-	animation-delay: 2s;
+	animation-delay: 3s;
 	animation-iteration-count: infinite;
 }
 

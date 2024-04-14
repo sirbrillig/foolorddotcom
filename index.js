@@ -3,7 +3,7 @@
 	 * @return {HTMLElement[]}
 	 */
 	function getTerminalTextContainers() {
-		return Array.from(document.querySelectorAll(".terminal-text"));
+		return Array.from(document.querySelectorAll(".terminal-text, .terminal-text-list li"));
 	}
 
 	/**
