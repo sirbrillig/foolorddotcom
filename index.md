@@ -1,12 +1,12 @@
 ---
 layout: layout.html
 ---
+
 <div id="top" class="intro-area">
   <div class="intro-area__container">
     <div class="name">Payton Swick</div>
     <a class="scroll-button-image" data-scroll href="#menu-area">&nbsp;</a>
     <div class="social-links">
-      <a class="social-links__icon twitter-icon" href="https://twitter.com/sirbrillig">Twitter</a>
       <a class="social-links__icon github-icon" href="https://github.com/sirbrillig">Github</a>
       <a class="social-links__icon instagram-icon" href="https://instagram.com/sirbrillig">Instagram</a>
       <a class="social-links__icon linkedin-icon" href="https://linkedin.com/in/paytonswick/">Linkedin</a>
@@ -22,7 +22,8 @@ layout: layout.html
 
         <p>I write about [tea](http://someteawith.me/) a lot, but I also have been known to write about [other things](https://whatpaytonfound.wordpress.com/).</p>
 
-        <p>During the day I work on web application development at [Automattic](https://automattic.com/), but if I'm not doing anything else you'll find me talking about things on [Twitter](https://twitter.com/sirbrillig) and posting code on [Github](https://github.com/sirbrillig).</p>
+        <p>During the day I work on web application development, but if I'm not doing anything else you'll find me talking about things on [my blog](https://payton.codes) and posting code on [Github](https://github.com/sirbrillig).</p>
     </div>
+
   </div>
 </div>
